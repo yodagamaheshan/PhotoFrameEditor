@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,7 @@
 		569B86D024025464001DC81C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B86CF24025464001DC81C /* HomeViewController.swift */; };
 		569B86F224025A46001DC81C /* FramesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B86F124025A46001DC81C /* FramesViewController.swift */; };
 		569B86F524025BD5001DC81C /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B86F424025BD5001DC81C /* EditPhotoViewController.swift */; };
+		569E8B102402C8170067B423 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 569E8B0F2402C8170067B423 /* GoogleService-Info.plist */; };
 		56AA1E2324019B13001156A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1E2224019B13001156A1 /* AppDelegate.swift */; };
 		56AA1E2524019B13001156A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1E2424019B13001156A1 /* SceneDelegate.swift */; };
 		56AA1E2A24019B13001156A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AA1E2824019B13001156A1 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		569B86CF24025464001DC81C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		569B86F124025A46001DC81C /* FramesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramesViewController.swift; sourceTree = "<group>"; };
 		569B86F424025BD5001DC81C /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
+		569E8B0F2402C8170067B423 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		56AA1E1F24019B13001156A1 /* WallPaperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallPaperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AA1E2224019B13001156A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56AA1E2424019B13001156A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +86,6 @@
 				A020D8C38E4A8B69BB88CB5D /* Pods-WallPaperApp.debug.xcconfig */,
 				ED497697AF42808AD8B2F643 /* Pods-WallPaperApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -198,6 +199,7 @@
 				56AA1E2B24019B1A001156A1 /* Assets.xcassets */,
 				56AA1E2D24019B1A001156A1 /* LaunchScreen.storyboard */,
 				56AA1E3024019B1A001156A1 /* Info.plist */,
+				569E8B0F2402C8170067B423 /* GoogleService-Info.plist */,
 			);
 			path = WallPaperApp;
 			sourceTree = "<group>";
@@ -279,6 +281,7 @@
 				569B86BD24024FBC001DC81C /* abeezee.ttf in Resources */,
 				569B86B824024FBC001DC81C /* satisfy.ttf in Resources */,
 				56AA1E2C24019B1A001156A1 /* Assets.xcassets in Resources */,
+				569E8B102402C8170067B423 /* GoogleService-Info.plist in Resources */,
 				569B86BC24024FBC001DC81C /* delius_swash_caps.ttf in Resources */,
 				569B86BE24024FBC001DC81C /* aldrich.ttf in Resources */,
 				569B86C124024FBC001DC81C /* trade_winds.ttf in Resources */,
