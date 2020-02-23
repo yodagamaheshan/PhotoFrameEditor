@@ -31,6 +31,7 @@
 		56AA1E2A24019B13001156A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AA1E2824019B13001156A1 /* Main.storyboard */; };
 		56AA1E2C24019B1A001156A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AA1E2B24019B1A001156A1 /* Assets.xcassets */; };
 		56AA1E2F24019B1A001156A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AA1E2D24019B1A001156A1 /* LaunchScreen.storyboard */; };
+		75C7144D8855BFFB943B83C5 /* Pods_WallPaperApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75C1EC15D3C6E43A149568F /* Pods_WallPaperApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,9 @@
 		56AA1E2B24019B1A001156A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56AA1E2E24019B1A001156A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56AA1E3024019B1A001156A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A020D8C38E4A8B69BB88CB5D /* Pods-WallPaperApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallPaperApp.debug.xcconfig"; path = "Target Support Files/Pods-WallPaperApp/Pods-WallPaperApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E75C1EC15D3C6E43A149568F /* Pods_WallPaperApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WallPaperApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED497697AF42808AD8B2F643 /* Pods-WallPaperApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallPaperApp.release.xcconfig"; path = "Target Support Files/Pods-WallPaperApp/Pods-WallPaperApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +71,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C7144D8855BFFB943B83C5 /* Pods_WallPaperApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3041A147CA474897E66349A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A020D8C38E4A8B69BB88CB5D /* Pods-WallPaperApp.debug.xcconfig */,
+				ED497697AF42808AD8B2F643 /* Pods-WallPaperApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		569B868C240242CC001DC81C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +173,8 @@
 			children = (
 				56AA1E2124019B13001156A1 /* WallPaperApp */,
 				56AA1E2024019B13001156A1 /* Products */,
+				3041A147CA474897E66349A9 /* Pods */,
+				8BEAC79E7227F7F6C7AB27DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +202,14 @@
 			path = WallPaperApp;
 			sourceTree = "<group>";
 		};
+		8BEAC79E7227F7F6C7AB27DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E75C1EC15D3C6E43A149568F /* Pods_WallPaperApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56AA1E3324019B1A001156A1 /* Build configuration list for PBXNativeTarget "WallPaperApp" */;
 			buildPhases = (
+				8165587C9D1E7957DB5EC0D6 /* [CP] Check Pods Manifest.lock */,
 				56AA1E1B24019B13001156A1 /* Sources */,
 				56AA1E1C24019B13001156A1 /* Frameworks */,
 				56AA1E1D24019B13001156A1 /* Resources */,
+				07A357E1854AB9736DBA078A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +289,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07A357E1854AB9736DBA078A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WallPaperApp/Pods-WallPaperApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WallPaperApp/Pods-WallPaperApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WallPaperApp/Pods-WallPaperApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8165587C9D1E7957DB5EC0D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WallPaperApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56AA1E1B24019B13001156A1 /* Sources */ = {
@@ -418,6 +487,7 @@
 		};
 		56AA1E3424019B1A001156A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A020D8C38E4A8B69BB88CB5D /* Pods-WallPaperApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -436,6 +506,7 @@
 		};
 		56AA1E3524019B1A001156A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED497697AF42808AD8B2F643 /* Pods-WallPaperApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
