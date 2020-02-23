@@ -25,3 +25,13 @@ extension UIColor{
 extension UIFont{
     
 }
+
+extension UIViewController{
+    func showAllert(with title: String, and message: String , defaultActionTitle: String = "OK") {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: defaultActionTitle, style: .default) { (action) in }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+}
+
