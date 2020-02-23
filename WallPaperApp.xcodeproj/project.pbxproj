@@ -20,9 +20,14 @@
 		569B86C024024FBC001DC81C /* aguafina_script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569B86B424024FBC001DC81C /* aguafina_script.ttf */; };
 		569B86C124024FBC001DC81C /* trade_winds.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569B86B524024FBC001DC81C /* trade_winds.ttf */; };
 		569B86C224024FBC001DC81C /* abril_fatface.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569B86B624024FBC001DC81C /* abril_fatface.ttf */; };
+		569B86CA24025425001DC81C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B86C924025425001DC81C /* RegisterViewController.swift */; };
+		569B86CC2402543C001DC81C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B86CB2402543C001DC81C /* LoginViewController.swift */; };
+		569B86CE24025456001DC81C /* FogotPassWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B86CD24025456001DC81C /* FogotPassWordViewController.swift */; };
+		569B86D024025464001DC81C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B86CF24025464001DC81C /* HomeViewController.swift */; };
+		569B86F224025A46001DC81C /* FramesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B86F124025A46001DC81C /* FramesViewController.swift */; };
+		569B86F524025BD5001DC81C /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B86F424025BD5001DC81C /* EditPhotoViewController.swift */; };
 		56AA1E2324019B13001156A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1E2224019B13001156A1 /* AppDelegate.swift */; };
 		56AA1E2524019B13001156A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1E2424019B13001156A1 /* SceneDelegate.swift */; };
-		56AA1E2724019B13001156A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1E2624019B13001156A1 /* ViewController.swift */; };
 		56AA1E2A24019B13001156A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AA1E2824019B13001156A1 /* Main.storyboard */; };
 		56AA1E2C24019B1A001156A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AA1E2B24019B1A001156A1 /* Assets.xcassets */; };
 		56AA1E2F24019B1A001156A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AA1E2D24019B1A001156A1 /* LaunchScreen.storyboard */; };
@@ -42,10 +47,15 @@
 		569B86B424024FBC001DC81C /* aguafina_script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = aguafina_script.ttf; sourceTree = "<group>"; };
 		569B86B524024FBC001DC81C /* trade_winds.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = trade_winds.ttf; sourceTree = "<group>"; };
 		569B86B624024FBC001DC81C /* abril_fatface.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = abril_fatface.ttf; sourceTree = "<group>"; };
+		569B86C924025425001DC81C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		569B86CB2402543C001DC81C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		569B86CD24025456001DC81C /* FogotPassWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogotPassWordViewController.swift; sourceTree = "<group>"; };
+		569B86CF24025464001DC81C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		569B86F124025A46001DC81C /* FramesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FramesViewController.swift; sourceTree = "<group>"; };
+		569B86F424025BD5001DC81C /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
 		56AA1E1F24019B13001156A1 /* WallPaperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallPaperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AA1E2224019B13001156A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56AA1E2424019B13001156A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		56AA1E2624019B13001156A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		56AA1E2924019B13001156A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		56AA1E2B24019B1A001156A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56AA1E2E24019B1A001156A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,6 +100,59 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		569B86C42402529F001DC81C /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				569B86C924025425001DC81C /* RegisterViewController.swift */,
+				569B86C5240252B0001DC81C /* Login */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		569B86C5240252B0001DC81C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				569B86CB2402543C001DC81C /* LoginViewController.swift */,
+				569B86C8240253B0001DC81C /* FogotPassWord */,
+				569B86C6240253A1001DC81C /* Home */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		569B86C6240253A1001DC81C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				569B86CF24025464001DC81C /* HomeViewController.swift */,
+				569B86C7240253A5001DC81C /* Frames */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		569B86C7240253A5001DC81C /* Frames */ = {
+			isa = PBXGroup;
+			children = (
+				569B86F124025A46001DC81C /* FramesViewController.swift */,
+				569B86F324025A53001DC81C /* EditPhoto */,
+			);
+			path = Frames;
+			sourceTree = "<group>";
+		};
+		569B86C8240253B0001DC81C /* FogotPassWord */ = {
+			isa = PBXGroup;
+			children = (
+				569B86CD24025456001DC81C /* FogotPassWordViewController.swift */,
+			);
+			path = FogotPassWord;
+			sourceTree = "<group>";
+		};
+		569B86F324025A53001DC81C /* EditPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				569B86F424025BD5001DC81C /* EditPhotoViewController.swift */,
+			);
+			path = EditPhoto;
+			sourceTree = "<group>";
+		};
 		56AA1E1624019B13001156A1 = {
 			isa = PBXGroup;
 			children = (
@@ -109,11 +172,11 @@
 		56AA1E2124019B13001156A1 /* WallPaperApp */ = {
 			isa = PBXGroup;
 			children = (
+				569B86C42402529F001DC81C /* Registration */,
 				569B86AA24024F9D001DC81C /* Fonts */,
 				569B868C240242CC001DC81C /* Extensions */,
 				56AA1E2224019B13001156A1 /* AppDelegate.swift */,
 				56AA1E2424019B13001156A1 /* SceneDelegate.swift */,
-				56AA1E2624019B13001156A1 /* ViewController.swift */,
 				56AA1E2824019B13001156A1 /* Main.storyboard */,
 				56AA1E2B24019B1A001156A1 /* Assets.xcassets */,
 				56AA1E2D24019B1A001156A1 /* LaunchScreen.storyboard */,
@@ -205,9 +268,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56AA1E2724019B13001156A1 /* ViewController.swift in Sources */,
+				569B86CC2402543C001DC81C /* LoginViewController.swift in Sources */,
+				569B86CE24025456001DC81C /* FogotPassWordViewController.swift in Sources */,
+				569B86F224025A46001DC81C /* FramesViewController.swift in Sources */,
+				569B86D024025464001DC81C /* HomeViewController.swift in Sources */,
+				569B86CA24025425001DC81C /* RegisterViewController.swift in Sources */,
 				56AA1E2324019B13001156A1 /* AppDelegate.swift in Sources */,
 				56AA1E2524019B13001156A1 /* SceneDelegate.swift in Sources */,
+				569B86F524025BD5001DC81C /* EditPhotoViewController.swift in Sources */,
 				569B868E240242E7001DC81C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
