@@ -2,6 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>satisfy.ttf</string>
+		<string>trade_winds.ttf</string>
+		<string>pattaya.ttf</string>
+		<string>outshine_regular.ttf</string>
+		<string>marck_script.ttf</string>
+		<string>abril_fatface.ttf</string>
+		<string>alt_matey_v2_black.otf</string>
+		<string>aldrich.ttf</string>
+		<string>abeezee.ttf</string>
+		<string>spicy_rice.ttf</string>
+		<string>delius_swash_caps.ttf</string>
+		<string>aguafina_script.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
