@@ -11,9 +11,13 @@ import UIKit
 
 extension UIColor{
     
-    enum AppColor {
+    enum AppColor: String {
         case darkYellow
         case lightYellow
         case pink
+    }
+    
+   static func getAppColor(color: AppColor) -> UIColor? {
+        return UIColor(named: color.rawValue)
     }
 }
