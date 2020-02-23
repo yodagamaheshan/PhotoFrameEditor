@@ -27,7 +27,7 @@ extension UIFont{
 }
 
 extension UIViewController{
-    func showAllert(with title: String, and message: String , defaultActionTitle: String = "OK") {
+    func showAllert(with title: String = "Alert !", and message: String , defaultActionTitle: String = "OK") {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: defaultActionTitle, style: .default) { (action) in }
         alert.addAction(action)
