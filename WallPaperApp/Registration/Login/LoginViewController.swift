@@ -11,6 +11,15 @@ import Firebase
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    
+    static func create() -> LoginViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: self))
+        let viewController = storyboard.instantiateViewController(withIdentifier: String(describing: LoginViewController.self)) as? LoginViewController
+        return viewController!
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
