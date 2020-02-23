@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		569B868E240242E7001DC81C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B868D240242E7001DC81C /* Extensions.swift */; };
 		56AA1E2324019B13001156A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1E2224019B13001156A1 /* AppDelegate.swift */; };
 		56AA1E2524019B13001156A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1E2424019B13001156A1 /* SceneDelegate.swift */; };
 		56AA1E2724019B13001156A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA1E2624019B13001156A1 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		569B868D240242E7001DC81C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		56AA1E1F24019B13001156A1 /* WallPaperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallPaperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AA1E2224019B13001156A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56AA1E2424019B13001156A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		569B868C240242CC001DC81C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				569B868D240242E7001DC81C /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		56AA1E1624019B13001156A1 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 			children = (
 				56AA1E2224019B13001156A1 /* AppDelegate.swift */,
 				56AA1E2424019B13001156A1 /* SceneDelegate.swift */,
+				569B868C240242CC001DC81C /* Extensions */,
 				56AA1E2624019B13001156A1 /* ViewController.swift */,
 				56AA1E2824019B13001156A1 /* Main.storyboard */,
 				56AA1E2B24019B1A001156A1 /* Assets.xcassets */,
@@ -141,6 +152,7 @@
 				56AA1E2724019B13001156A1 /* ViewController.swift in Sources */,
 				56AA1E2324019B13001156A1 /* AppDelegate.swift in Sources */,
 				56AA1E2524019B13001156A1 /* SceneDelegate.swift in Sources */,
+				569B868E240242E7001DC81C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
