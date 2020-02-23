@@ -21,3 +21,7 @@ extension UIColor{
         return UIColor(named: color.rawValue)
     }
 }
+
+extension UIFont{
+    
+}
