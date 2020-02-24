@@ -16,6 +16,8 @@ extension UIColor{
         case lightYellow
         case pink
         case creem
+        case darkBlackBlue
+        case darkGray
     }
     
    static func getAppColor(color: AppColor) -> UIColor? {
@@ -38,11 +40,11 @@ extension UIViewController{
 
 extension UIView{
     
-    func styleForTextFieldBackground(){
+    func styleWithRoundCorner(with borderColor: UIColor,filling color: UIColor){
         self.layer.cornerRadius = self.frame.height/2
-        self.backgroundColor = UIColor.getAppColor(color: .creem)
+        self.backgroundColor = color
         self.layer.borderWidth = 1
-        self.layer.borderColor = UIColor.white.cgColor
+        self.layer.borderColor = borderColor.cgColor
     }
     
     func styleForRoundCorners(){

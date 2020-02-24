@@ -30,7 +30,7 @@ class RegisterViewController: UIViewController {
     
     func setupViews(){
         for backgroundView in textFieldContainers{
-            backgroundView.styleForTextFieldBackground()
+            backgroundView.styleWithRoundCorner(with: UIColor.getAppColor(color: .creem) ?? UIColor.white, filling: UIColor.white)
         }
         sugnupButton.styleForRoundCorners()
     }
