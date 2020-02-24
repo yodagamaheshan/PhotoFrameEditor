@@ -19,7 +19,7 @@ class FogotPassWordViewController: UIViewController {
     }
     
     func setupViews(){
-        textFieldBackgrund.styleForTextFieldBackground()
+        textFieldBackgrund.styleWithRoundCorner(with: UIColor.getAppColor(color: .creem) ?? UIColor.white, filling: UIColor.white)
         button.styleForRoundCorners()
     }
    

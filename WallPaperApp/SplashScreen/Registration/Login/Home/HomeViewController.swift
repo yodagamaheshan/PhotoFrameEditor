@@ -9,22 +9,16 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    @IBOutlet var buttonCollection: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupViews(){
+        for button in buttonCollection{
+            button.styleWithRoundCorner(with: UIColor.getAppColor(color: .darkBlackBlue) ?? UIColor.black, filling: UIColor.getAppColor(color: .darkGray) ?? UIColor.gray)
+        }
     }
-    */
-
 }

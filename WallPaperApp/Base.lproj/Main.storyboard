@@ -577,10 +577,10 @@
             </objects>
             <point key="canvasLocation" x="1678" y="92"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="YXp-Ev-4sC">
             <objects>
-                <viewController storyboardIdentifier="RegisterViewController" id="GM4-Xr-VqT" customClass="RegisterViewController" customModule="WallPaperApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GM4-Xr-VqT" customClass="HomeViewController" customModule="WallPaperApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gpr-cP-POh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -595,10 +595,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-tT-Brb">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="875"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="N0k-4R-Fzs">
-                                                        <rect key="frame" x="20" y="220" width="335" height="435"/>
+                                                        <rect key="frame" x="20" y="116" width="335" height="435"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="jxa-cs-jhH">
                                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="390"/>
@@ -614,9 +614,6 @@
                                                                         <state key="normal" title="Birthday Frames">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
-                                                                        <connections>
-                                                                            <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="L1m-TO-u1e"/>
-                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFb-GN-0Nx">
                                                                         <rect key="frame" x="52.5" y="85" width="230" height="50"/>
@@ -629,9 +626,6 @@
                                                                         <state key="normal" title="Endearment Frames">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
-                                                                        <connections>
-                                                                            <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="2q6-fF-AnN"/>
-                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NN-Xa-PFg">
                                                                         <rect key="frame" x="52.5" y="170" width="230" height="50"/>
@@ -644,9 +638,6 @@
                                                                         <state key="normal" title="Matrimonial Frames">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
-                                                                        <connections>
-                                                                            <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="6jZ-hR-fXC"/>
-                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joa-Ft-bfy">
                                                                         <rect key="frame" x="52.5" y="255" width="230" height="50"/>
@@ -659,9 +650,6 @@
                                                                         <state key="normal" title="Memorial Frames">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
-                                                                        <connections>
-                                                                            <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="VEC-g8-Lky"/>
-                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmZ-z4-t0T">
                                                                         <rect key="frame" x="52.5" y="340" width="230" height="50"/>
@@ -674,9 +662,6 @@
                                                                         <state key="normal" title="Share App">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
-                                                                        <connections>
-                                                                            <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="6wS-Uz-qCq"/>
-                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -697,9 +682,9 @@
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="N0k-4R-Fzs" secondAttribute="trailing" constant="20" id="3L8-iN-F3f"/>
                                                     <constraint firstItem="N0k-4R-Fzs" firstAttribute="leading" secondItem="VXh-tT-Brb" secondAttribute="leading" constant="20" id="Asm-JT-SIx"/>
-                                                    <constraint firstItem="N0k-4R-Fzs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VXh-tT-Brb" secondAttribute="top" constant="220" id="Ctl-fQ-T1S"/>
+                                                    <constraint firstItem="N0k-4R-Fzs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VXh-tT-Brb" secondAttribute="top" constant="50" id="Ctl-fQ-T1S"/>
                                                     <constraint firstItem="N0k-4R-Fzs" firstAttribute="centerY" secondItem="VXh-tT-Brb" secondAttribute="centerY" id="DmN-W1-nQ8"/>
-                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="N0k-4R-Fzs" secondAttribute="bottom" constant="220" id="S1M-A8-50g"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="N0k-4R-Fzs" secondAttribute="bottom" constant="50" id="S1M-A8-50g"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -737,14 +722,13 @@
                             <constraint firstAttribute="bottom" secondItem="zR8-RK-2yL" secondAttribute="bottom" id="whJ-rR-ssZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="118-t5-BPD"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="d8J-VP-JsJ"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="sugnupButton" destination="lAU-gJ-nRG" id="WDa-p0-5sh"/>
+                        <outletCollection property="buttonCollection" destination="lAU-gJ-nRG" collectionClass="NSMutableArray" id="9My-QY-xuE"/>
+                        <outletCollection property="buttonCollection" destination="KFb-GN-0Nx" collectionClass="NSMutableArray" id="RTK-5n-Mzp"/>
+                        <outletCollection property="buttonCollection" destination="9NN-Xa-PFg" collectionClass="NSMutableArray" id="r71-hP-qVr"/>
+                        <outletCollection property="buttonCollection" destination="joa-Ft-bfy" collectionClass="NSMutableArray" id="bPA-wH-fav"/>
+                        <outletCollection property="buttonCollection" destination="XmZ-z4-t0T" collectionClass="NSMutableArray" id="DzU-cb-tNF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhQ-qw-rhR" sceneMemberID="firstResponder"/>

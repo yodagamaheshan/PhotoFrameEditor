@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
     
     func setupView(){
         for backgroundView in textFieldBackGrounds{
-            backgroundView.styleForTextFieldBackground()
+           backgroundView.styleWithRoundCorner(with: UIColor.getAppColor(color: .creem) ?? UIColor.white, filling: UIColor.white)
         }
         loginButton.styleForRoundCorners()
     }
