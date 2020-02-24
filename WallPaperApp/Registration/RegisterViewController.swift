@@ -14,6 +14,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet var textFieldContainers: [UIView]!
     
     static func create() -> RegisterViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: self))
