@@ -205,11 +205,6 @@
                             <constraint firstItem="3aw-uX-A5F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xVE-11-3v9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="iun-Z4-Qe1"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="emailTF" destination="HSq-M6-W0u" id="Hf5-Zd-3yw"/>
