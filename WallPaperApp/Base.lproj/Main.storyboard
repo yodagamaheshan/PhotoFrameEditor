@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0kO-An-ZmK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GM4-Xr-VqT">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -7,6 +7,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="marck_script.ttf">
+            <string>MarckScript-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Splash View Controller-->
         <scene sceneID="OJU-37-hWm">
@@ -590,72 +595,95 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXh-tT-Brb">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="725"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="875"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="N0k-4R-Fzs">
-                                                        <rect key="frame" x="20" y="220" width="335" height="285"/>
+                                                        <rect key="frame" x="20" y="220" width="335" height="435"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="jxa-cs-jhH">
-                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="240"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="jxa-cs-jhH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="335" height="390"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAU-gJ-nRG">
-                                                                        <rect key="frame" x="92.5" y="0.0" width="150" height="30"/>
-                                                                        <color key="backgroundColor" name="lightYellow"/>
+                                                                        <rect key="frame" x="52.5" y="0.0" width="230" height="50"/>
+                                                                        <color key="backgroundColor" name="darkGray"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="3i5-nh-nJU"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="3i5-nh-nJU"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="7xl-Ah-GyJ"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Signup">
-                                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <fontDescription key="fontDescription" name="MarckScript-Regular" family="Marck Script" pointSize="25"/>
+                                                                        <state key="normal" title="Birthday Frames">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
                                                                             <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="L1m-TO-u1e"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4f-Kk-gOP">
-                                                                        <rect key="frame" x="92.5" y="70" width="150" height="30"/>
-                                                                        <color key="backgroundColor" name="lightYellow"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFb-GN-0Nx">
+                                                                        <rect key="frame" x="52.5" y="85" width="230" height="50"/>
+                                                                        <color key="backgroundColor" name="darkGray"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="dsg-ds-wUJ"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="1RR-fr-JAZ"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="cJH-ZE-Hhc"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Signup">
-                                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <fontDescription key="fontDescription" name="MarckScript-Regular" family="Marck Script" pointSize="25"/>
+                                                                        <state key="normal" title="Endearment Frames">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="Zyg-Re-Prw"/>
+                                                                            <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="2q6-fF-AnN"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxD-aF-agL">
-                                                                        <rect key="frame" x="92.5" y="140" width="150" height="30"/>
-                                                                        <color key="backgroundColor" name="lightYellow"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NN-Xa-PFg">
+                                                                        <rect key="frame" x="52.5" y="170" width="230" height="50"/>
+                                                                        <color key="backgroundColor" name="darkGray"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="GYD-uO-8QP"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="99U-8X-bqv"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="bLq-7X-WeJ"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Signup">
-                                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <fontDescription key="fontDescription" name="MarckScript-Regular" family="Marck Script" pointSize="25"/>
+                                                                        <state key="normal" title="Matrimonial Frames">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="RzX-lm-ex6"/>
+                                                                            <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="6jZ-hR-fXC"/>
                                                                         </connections>
                                                                     </button>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIS-IW-8R4">
-                                                                        <rect key="frame" x="92.5" y="210" width="150" height="30"/>
-                                                                        <color key="backgroundColor" name="lightYellow"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joa-Ft-bfy">
+                                                                        <rect key="frame" x="52.5" y="255" width="230" height="50"/>
+                                                                        <color key="backgroundColor" name="darkGray"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="1Qj-Hh-OHw"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="66o-Qs-HiS"/>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="SQ2-nd-5oX"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Signup">
-                                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                        <fontDescription key="fontDescription" name="MarckScript-Regular" family="Marck Script" pointSize="25"/>
+                                                                        <state key="normal" title="Memorial Frames">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="ddx-GF-geI"/>
+                                                                            <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="VEC-g8-Lky"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmZ-z4-t0T">
+                                                                        <rect key="frame" x="52.5" y="340" width="230" height="50"/>
+                                                                        <color key="backgroundColor" name="darkGray"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="FEU-LZ-STk"/>
+                                                                            <constraint firstAttribute="height" constant="50" id="w9X-22-puS"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="MarckScript-Regular" family="Marck Script" pointSize="25"/>
+                                                                        <state key="normal" title="Share App">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="signupButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="6wS-Uz-qCq"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfD-jD-jAT">
-                                                                <rect key="frame" x="73" y="255" width="189" height="30"/>
+                                                                <rect key="frame" x="75.5" y="405" width="184" height="30"/>
                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                                <state key="normal" title="Already Registered?Login">
+                                                                <state key="normal" title="www.YourPhotoOnIt.com">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
                                                             </button>
@@ -727,6 +755,9 @@
     <resources>
         <image name="form" width="360" height="640"/>
         <image name="splashScreenImage" width="360" height="640"/>
+        <namedColor name="darkGray">
+            <color red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="lightYellow">
             <color red="0.9137254901960784" green="0.80392156862745101" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

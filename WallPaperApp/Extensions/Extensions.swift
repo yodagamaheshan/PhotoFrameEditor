@@ -18,6 +18,7 @@ extension UIColor{
         case creem
         case darkBlackBlue
         case darkGray
+        case darkGreen
     }
     
    static func getAppColor(color: AppColor) -> UIColor? {
