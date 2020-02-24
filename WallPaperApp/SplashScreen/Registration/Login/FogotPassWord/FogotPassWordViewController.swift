@@ -9,22 +9,23 @@
 import UIKit
 
 class FogotPassWordViewController: UIViewController {
-
+    @IBOutlet weak var textFieldBackgrund: UIView!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupViews(){
+        textFieldBackgrund.styleForTextFieldBackground()
+        button.styleForRoundCorners()
     }
-    */
-
+   
+    @IBAction func resetPassword(_ sender: Any) {
+        
+        
+    }
+    
 }
