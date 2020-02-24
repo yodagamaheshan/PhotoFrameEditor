@@ -36,3 +36,13 @@ extension UIViewController{
     }
 }
 
+extension UIView{
+    
+    func styleForTextFieldBackground(){
+        self.layer.cornerRadius = self.frame.height/2
+        self.backgroundColor = UIColor.getAppColor(color: .creem)
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.white.cgColor
+    }
+    
+}
