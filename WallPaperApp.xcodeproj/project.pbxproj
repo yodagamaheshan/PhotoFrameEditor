@@ -32,6 +32,7 @@
 		56AA1E2A24019B13001156A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AA1E2824019B13001156A1 /* Main.storyboard */; };
 		56AA1E2C24019B1A001156A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AA1E2B24019B1A001156A1 /* Assets.xcassets */; };
 		56AA1E2F24019B1A001156A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AA1E2D24019B1A001156A1 /* LaunchScreen.storyboard */; };
+		56F4CA2224039923004DA35D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F4CA2124039923004DA35D /* SplashViewController.swift */; };
 		75C7144D8855BFFB943B83C5 /* Pods_WallPaperApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75C1EC15D3C6E43A149568F /* Pods_WallPaperApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		56AA1E2B24019B1A001156A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56AA1E2E24019B1A001156A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56AA1E3024019B1A001156A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56F4CA2124039923004DA35D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		A020D8C38E4A8B69BB88CB5D /* Pods-WallPaperApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallPaperApp.debug.xcconfig"; path = "Target Support Files/Pods-WallPaperApp/Pods-WallPaperApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E75C1EC15D3C6E43A149568F /* Pods_WallPaperApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WallPaperApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED497697AF42808AD8B2F643 /* Pods-WallPaperApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WallPaperApp.release.xcconfig"; path = "Target Support Files/Pods-WallPaperApp/Pods-WallPaperApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,7 +192,7 @@
 		56AA1E2124019B13001156A1 /* WallPaperApp */ = {
 			isa = PBXGroup;
 			children = (
-				569B86C42402529F001DC81C /* Registration */,
+				56F4CA2024039904004DA35D /* SplashScreen */,
 				569B86AA24024F9D001DC81C /* Fonts */,
 				569B868C240242CC001DC81C /* Extensions */,
 				56AA1E2224019B13001156A1 /* AppDelegate.swift */,
@@ -202,6 +204,15 @@
 				569E8B0F2402C8170067B423 /* GoogleService-Info.plist */,
 			);
 			path = WallPaperApp;
+			sourceTree = "<group>";
+		};
+		56F4CA2024039904004DA35D /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				569B86C42402529F001DC81C /* Registration */,
+				56F4CA2124039923004DA35D /* SplashViewController.swift */,
+			);
+			path = SplashScreen;
 			sourceTree = "<group>";
 		};
 		8BEAC79E7227F7F6C7AB27DC /* Frameworks */ = {
@@ -349,6 +360,7 @@
 				56AA1E2524019B13001156A1 /* SceneDelegate.swift in Sources */,
 				569B86F524025BD5001DC81C /* EditPhotoViewController.swift in Sources */,
 				569B868E240242E7001DC81C /* Extensions.swift in Sources */,
+				56F4CA2224039923004DA35D /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
