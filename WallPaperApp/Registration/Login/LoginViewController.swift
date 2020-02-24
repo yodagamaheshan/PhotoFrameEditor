@@ -10,9 +10,11 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet var textFieldBackGrounds: [UIView]!
+    @IBOutlet weak var loginButton: UIButton!
     
     static func create() -> LoginViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: self))
@@ -22,15 +24,21 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
+    }
+    
+    func setupView(){
+        for backgroundView in textFieldBackGrounds{
+            backgroundView.styleForTextFieldBackground()
+        }
+        loginButton.styleForRoundCorners()
     }
     
     @IBAction func login(_ sender: Any) {
         
         Auth.auth().signIn(withEmail: emailTF.text!, password: passwordTF.text!) { [weak self] authResult, error in
-          guard let strongSelf = self else { return }
-         debugPrint(authResult) 
+            guard let strongSelf = self else { return }
+            debugPrint(authResult)
         }
         
     }

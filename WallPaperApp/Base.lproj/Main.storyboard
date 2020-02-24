@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iTd-iv-3Lj">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -118,7 +118,8 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSa-5U-4OX">
-                                                                <rect key="frame" x="80" y="267" width="175" height="30"/>
+                                                                <rect key="frame" x="73" y="267" width="189" height="30"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                 <state key="normal" title="Already Registered?Login">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
@@ -263,7 +264,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="form" translatesAutoresizingMaskIntoConstraints="NO" id="SZt-cY-S1P">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-wk-d3L">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -327,7 +328,7 @@
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="6EV-cl-Jls"/>
                                                                         </constraints>
-                                                                        <state key="normal" title="Signup">
+                                                                        <state key="normal" title="Login">
                                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         </state>
                                                                         <connections>
@@ -343,16 +344,18 @@
                                                                 </constraints>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hQs-af-iuF">
-                                                                <rect key="frame" x="47" y="201" width="241" height="30"/>
+                                                                <rect key="frame" x="39" y="201" width="257" height="30"/>
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SsO-TY-IhH">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="110" height="30"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                         <state key="normal" title="Not Registered?">
                                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         </state>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEt-aj-HeQ">
-                                                                        <rect key="frame" x="126" y="0.0" width="115" height="30"/>
+                                                                        <rect key="frame" x="134" y="0.0" width="123" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                         <state key="normal" title="Forget Password">
                                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         </state>
@@ -366,7 +369,6 @@
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstItem="BmW-7A-DqX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lkp-4o-nQ4" secondAttribute="top" constant="220" id="2NG-Ta-ZXi"/>
                                                     <constraint firstItem="BmW-7A-DqX" firstAttribute="leading" secondItem="lkp-4o-nQ4" secondAttribute="leading" constant="20" id="f5m-j1-V2c"/>
@@ -384,7 +386,6 @@
                                         </constraints>
                                     </scrollView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="oFs-wD-XW0" secondAttribute="trailing" id="JC8-Lz-VMi"/>
                                     <constraint firstItem="lkp-4o-nQ4" firstAttribute="width" secondItem="JdB-wk-d3L" secondAttribute="width" id="StA-qu-olh"/>
@@ -411,15 +412,13 @@
                             <constraint firstItem="JdB-wk-d3L" firstAttribute="bottom" secondItem="YOG-0a-Igj" secondAttribute="bottom" id="xey-GW-XyY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YOG-0a-Igj"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="SZt-cY-S1P"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="emailTF" destination="ON9-MQ-VU6" id="WAI-l2-2C0"/>
+                        <outlet property="loginButton" destination="nMf-id-bTD" id="Imm-1y-ypj"/>
                         <outlet property="passwordTF" destination="XPf-d5-2FL" id="Ptj-Db-NJp"/>
+                        <outletCollection property="textFieldBackGrounds" destination="Hnt-6G-nH6" collectionClass="NSMutableArray" id="F4i-z4-4Pm"/>
+                        <outletCollection property="textFieldBackGrounds" destination="1Ox-ku-Fim" collectionClass="NSMutableArray" id="po6-as-a3C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szd-dD-PKt" sceneMemberID="firstResponder"/>
