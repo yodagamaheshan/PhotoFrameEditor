@@ -10,11 +10,12 @@ import UIKit
 import Firebase
 
 class RegisterViewController: UIViewController {
-
+    
     @IBOutlet weak var firstNameTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet var textFieldContainers: [UIView]!
+    @IBOutlet weak var sugnupButton: UIButton!
     
     static func create() -> RegisterViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: self))
@@ -24,8 +25,16 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupViews()
     }
+    
+    func setupViews(){
+        for backgroundView in textFieldContainers{
+            backgroundView.styleForTextFieldBackground()
+        }
+        sugnupButton.styleForRoundCorners()
+    }
+    
     @IBAction func signupButtonPressed(_ sender: Any) {
         let name = firstNameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let email = emailTF.text?.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -57,5 +66,5 @@ class RegisterViewController: UIViewController {
         }
         return true
     }
-
+    
 }
