@@ -37,6 +37,10 @@ extension UIViewController{
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func goTo(viewController: UIViewController){
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension UIView{
