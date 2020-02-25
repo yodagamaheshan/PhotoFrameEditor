@@ -209,8 +209,8 @@
 		56F4CA2024039904004DA35D /* SplashScreen */ = {
 			isa = PBXGroup;
 			children = (
-				569B86C42402529F001DC81C /* Registration */,
 				56F4CA2124039923004DA35D /* SplashViewController.swift */,
+				569B86C42402529F001DC81C /* Registration */,
 			);
 			path = SplashScreen;
 			sourceTree = "<group>";
