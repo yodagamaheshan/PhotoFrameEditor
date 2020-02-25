@@ -67,4 +67,11 @@ class RegisterViewController: UIViewController {
         return true
     }
     
+    func sendVarificationEmail(){
+        
+    }
+    
+    @IBAction func goToLogin(_ sender: Any) {
+        self.goTo(viewController: LoginViewController.create())
+    }
 }

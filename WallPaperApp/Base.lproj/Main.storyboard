@@ -155,6 +155,9 @@
                                                                 <state key="normal" title="Already Registered?Login">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="goToLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q4k-uQ-KFm"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -347,6 +350,9 @@
                                                                         <state key="normal" title="Not Registered?">
                                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="notRegisteredPressed:" destination="iTd-iv-3Lj" eventType="touchUpInside" id="2qt-7D-ww2"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEt-aj-HeQ">
                                                                         <rect key="frame" x="134" y="0.0" width="123" height="30"/>
@@ -355,7 +361,7 @@
                                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <segue destination="0kO-An-ZmK" kind="show" id="BGp-cl-lxO"/>
+                                                                            <action selector="fogetPWPressed:" destination="iTd-iv-3Lj" eventType="touchUpInside" id="VUr-xZ-FMg"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>

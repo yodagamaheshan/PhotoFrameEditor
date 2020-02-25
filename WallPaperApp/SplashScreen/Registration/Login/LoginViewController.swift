@@ -42,5 +42,12 @@ class LoginViewController: UIViewController {
         }
         
     }
+    @IBAction func notRegisteredPressed(_ sender: Any) {
+        self.goTo(viewController: RegisterViewController.create())
+    }
+    
+    @IBAction func fogetPWPressed(_ sender: Any) {
+        goTo(viewController: FogotPassWordViewController.create())
+    }
     
 }
