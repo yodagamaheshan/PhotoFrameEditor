@@ -26,9 +26,16 @@ class SplashViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.5, execute: {
-            if Auth.auth().currentUser != nil {
+            
+            
+            if let currentUser = Auth.auth().currentUser  {
               // User is signed in.
+                if currentUser.isEmailVerified{
                 self.goTo(viewController: HomeViewController.create())
+                } else{
+                    self.goTo(viewController: LoginViewController.create())
+                }
+                
             } else {
               // No user is signed in.
               self.goTo(viewController: RegisterViewController.create())
