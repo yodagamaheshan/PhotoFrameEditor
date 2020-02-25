@@ -30,7 +30,7 @@ class RegisterViewController: UIViewController {
     
     func setupViews(){
         for backgroundView in textFieldContainers{
-            backgroundView.styleWithRoundCorner(with: UIColor.getAppColor(color: .creem) ?? UIColor.white, filling: UIColor.white)
+            backgroundView.styleWithRoundCorner(with: UIColor.white , filling:  UIColor.getAppColor(color: .creem) ?? UIColor.white)
         }
         sugnupButton.styleForRoundCorners()
     }
@@ -41,13 +41,22 @@ class RegisterViewController: UIViewController {
         let password = passwordTF.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         
         if isValied(name: name, email: email, and: password){
-            Auth.auth().createUser(withEmail: email!, password: password!) { authResult, error in
-                debugPrint(authResult)
+            let firebaseAuth = Auth.auth()
+            firebaseAuth.createUser(withEmail: email!, password: password!) { authResult, error in
+                if error == nil{
+                    self.showAllert(and: "User Already Created or Check your internet")
+                }else{
+                    firebaseAuth.currentUser?.sendEmailVerification(completion: nil)
+                    do {
+                        try firebaseAuth.signOut()
+                    } catch let signOutError as NSError {
+                        print ("Error signing out: %@", signOutError)
+                    }
+                    
+                    self.goToLogin(LoginViewController.create())
+                }
             }
-        } else {
-            return
-        }
-        
+        } 
     }
     
     func isValied(name: String?,email: String?,and password: String?) -> Bool{
@@ -67,9 +76,7 @@ class RegisterViewController: UIViewController {
         return true
     }
     
-    func sendVarificationEmail(){
-        
-    }
+   
     
     @IBAction func goToLogin(_ sender: Any) {
         self.goTo(viewController: LoginViewController.create())
