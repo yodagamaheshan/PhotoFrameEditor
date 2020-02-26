@@ -11,10 +11,19 @@ import UIKit
 class FrameCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var frameImage: UIImageView!
+    @IBOutlet weak var unlockButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupViews()
+    }
+    
+    func setupViews(){
+        unlockButton.layer.cornerRadius = 8
     }
 
+    @IBAction func unlockThisFrame(_ sender: Any) {
+        
+    }
+    
 }
