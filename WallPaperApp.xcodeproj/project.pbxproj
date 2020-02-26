@@ -149,6 +149,7 @@
 		569B86C7240253A5001DC81C /* Frames */ = {
 			isa = PBXGroup;
 			children = (
+				569C50DA2406A4A70074FB0D /* FrameViewCell */,
 				569B86F124025A46001DC81C /* FramesViewController.swift */,
 				569B86F324025A53001DC81C /* EditPhoto */,
 			);
@@ -169,6 +170,13 @@
 				569B86F424025BD5001DC81C /* EditPhotoViewController.swift */,
 			);
 			path = EditPhoto;
+			sourceTree = "<group>";
+		};
+		569C50DA2406A4A70074FB0D /* FrameViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FrameViewCell;
 			sourceTree = "<group>";
 		};
 		56AA1E1624019B13001156A1 = {
