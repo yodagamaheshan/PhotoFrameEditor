@@ -718,6 +718,9 @@
                                                                 <state key="normal" title="www.YourPhotoOnIt.com">
                                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="onLinkPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="bta-16-LvV"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
