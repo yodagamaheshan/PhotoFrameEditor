@@ -709,6 +709,9 @@
                                                                         <state key="normal" title="Share App">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="shareButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="NjN-K9-4Rm"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>

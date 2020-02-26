@@ -34,4 +34,11 @@ class HomeViewController: UIViewController {
         }
     }
     
+    @IBAction func shareButtonPressed(_ sender: Any) {
+        let items = [URL(string: "https://www.apple.com")!]
+        let ac = UIActivityViewController(activityItems: items, applicationActivities: nil)
+        present(ac, animated: true)
+
+    }
+    
 }
