@@ -29,19 +29,62 @@ class LoginViewController: UIViewController {
     
     func setupView(){
         for backgroundView in textFieldBackGrounds{
-           backgroundView.styleWithRoundCorner(with: UIColor.getAppColor(color: .creem) ?? UIColor.white, filling: UIColor.white)
+           backgroundView.styleWithRoundCorner(with: UIColor.white, filling:  UIColor.getAppColor(color: .creem) ?? UIColor.white )
         }
         loginButton.styleForRoundCorners()
     }
     
     @IBAction func login(_ sender: Any) {
         
-        Auth.auth().signIn(withEmail: emailTF.text!, password: passwordTF.text!) { [weak self] authResult, error in
-            guard let strongSelf = self else { return }
-            debugPrint(authResult)
+        if isValidate(email: emailTF.text, and: passwordTF.text){
+            Auth.auth().signIn(withEmail: emailTF.text!, password: passwordTF.text!) { [weak self] authResult, error in
+                guard let strongSelf = self else { return }
+                if authResult == nil{
+                    //email pw wrong
+                    self?.showAllert(and: "Login not successfull")
+                }
+                else{
+                    //email verified
+                    if let user = Auth.auth().currentUser, user.isEmailVerified{
+                        self?.goTo(viewController: HomeViewController.create())
+                    }else{
+                        self?.sendVarificationEmail()
+                    }
+                }
+            }
         }
         
     }
+    
+    func isValidate(email: String?, and password: String?) -> Bool{
+        let email = email?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = password?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if email?.isEmpty ?? true {
+            showAllert(and: "Enter the correct Email")
+            return false
+        } else if password?.isEmpty ?? true {
+            showAllert(and: "Enter the correct password")
+            return false
+        }
+         return true
+    }
+    
+    func sendVarificationEmail(){
+           if let user = Auth.auth().currentUser, let userEmail = user.email{
+                   let alertVC = UIAlertController(title: "Error", message: "Sorry. Your email address has not yet been verified. Do you want us to send another verification email to \(userEmail).", preferredStyle: .alert)
+                   let alertActionOkay = UIAlertAction(title: "Okay", style: .default) {
+                       (_) in
+                       user.sendEmailVerification(completion: nil)
+                   }
+                   let alertActionCancel = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+                   
+                   alertVC.addAction(alertActionOkay)
+                   alertVC.addAction(alertActionCancel)
+                   self.present(alertVC, animated: true, completion: nil)
+               }
+           }
+    
     @IBAction func notRegisteredPressed(_ sender: Any) {
         self.goTo(viewController: RegisterViewController.create())
     }

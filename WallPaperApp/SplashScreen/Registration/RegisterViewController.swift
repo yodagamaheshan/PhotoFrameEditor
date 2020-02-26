@@ -43,7 +43,7 @@ class RegisterViewController: UIViewController {
         if isValied(name: name, email: email, and: password){
             let firebaseAuth = Auth.auth()
             firebaseAuth.createUser(withEmail: email!, password: password!) { authResult, error in
-                if error == nil{
+                if authResult == nil{
                     self.showAllert(and: "User Already Created or Check your internet")
                 }else{
                     firebaseAuth.currentUser?.sendEmailVerification(completion: nil)

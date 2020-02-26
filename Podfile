@@ -7,5 +7,6 @@ target 'WallPaperApp' do
 
   # Pods for WallPaperApp
 pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
 
 end

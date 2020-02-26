@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>617140558291-q8ohnf0vfm5e6qg8hukrlqrlk7gvoie5.apps.googleusercontent.com</string>
+	<string>639965591223-0jn4vr3f18sibc5ksr4pvl1igmmv0sp6.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.617140558291-q8ohnf0vfm5e6qg8hukrlqrlk7gvoie5</string>
+	<string>com.googleusercontent.apps.639965591223-0jn4vr3f18sibc5ksr4pvl1igmmv0sp6</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCd7UnjIZPzIsnP6UB8mM5GH0jnAUW9XeE</string>
+	<string>AIzaSyCvEnEzcP7bgv5xhRHpU6PqsW8hQ9Y_EfU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>617140558291</string>
+	<string>639965591223</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>HeshCompany.arsalanalishah1--arsalanalishah1</string>
 	<key>PROJECT_ID</key>
-	<string>fiverphotoframe</string>
+	<string>elegant-digital-frame</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fiverphotoframe.appspot.com</string>
+	<string>elegant-digital-frame.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:617140558291:ios:f306bf8b9b56bc3ccb3726</string>
+	<string>1:639965591223:ios:76d36c842b236dd3bbbf32</string>
 	<key>DATABASE_URL</key>
-	<string>https://fiverphotoframe.firebaseio.com</string>
+	<string>https://elegant-digital-frame.firebaseio.com</string>
 </dict>
 </plist>

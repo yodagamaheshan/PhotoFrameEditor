@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FogotPassWordViewController: UIViewController {
     @IBOutlet weak var textFieldBackgrund: UIView!
@@ -31,8 +32,13 @@ class FogotPassWordViewController: UIViewController {
     }
    
     @IBAction func resetPassword(_ sender: Any) {
-        
-        
+        if let email = textField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !email.isEmpty{
+            Auth.auth().sendPasswordReset(withEmail: email) { error in
+                if email == nil{
+                    self.showAllert(and: "Check Mail For reset Your Password")
+                }
+            }
+        }   
     }
     
 }
