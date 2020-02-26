@@ -9,7 +9,9 @@
 import UIKit
 
 class EditPhotoViewController: UIViewController {
-
+    @IBOutlet weak var imageView: UIImageView!
+    var currentImage: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +19,12 @@ class EditPhotoViewController: UIViewController {
     }
     
     @IBAction func chooseImageButtonPressed(_ sender: Any) {
+        let picker = UIImagePickerController()
+        //TODO: change croping
+        picker.allowsEditing = true
+        picker.delegate = self
+        picker.sourceType = UIImagePickerController.SourceType.photoLibrary
+        present(picker, animated: true)
     }
     
     @IBAction func backgroundColorButtonPressed(_ sender: Any) {
@@ -32,4 +40,16 @@ class EditPhotoViewController: UIViewController {
     }
     
     
+}
+
+extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[.editedImage] as? UIImage else { return }
+
+        dismiss(animated: true)
+
+        currentImage = image
+        imageView.image = currentImage
+    }
 }
