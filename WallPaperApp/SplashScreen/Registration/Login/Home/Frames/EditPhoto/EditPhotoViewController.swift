@@ -16,15 +16,20 @@ class EditPhotoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func chooseImageButtonPressed(_ sender: Any) {
     }
-    */
-
+    
+    @IBAction func backgroundColorButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func addTextButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func deleteImageButtonPresed(_ sender: Any) {
+    }
+    
+    @IBAction func downloadImageButtonPressed(_ sender: Any) {
+    }
+    
+    
 }
