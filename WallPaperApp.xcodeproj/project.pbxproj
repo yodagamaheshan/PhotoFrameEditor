@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		56057ACD240681FB001789C5 /* GoogleService-Info-3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56057ACC240681FB001789C5 /* GoogleService-Info-3.plist */; };
+		56057ACD240681FB001789C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56057ACC240681FB001789C5 /* GoogleService-Info.plist */; };
 		569B868E240242E7001DC81C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B868D240242E7001DC81C /* Extensions.swift */; };
 		569B86B724024FBC001DC81C /* marck_script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569B86AB24024FBB001DC81C /* marck_script.ttf */; };
 		569B86B824024FBC001DC81C /* satisfy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569B86AC24024FBC001DC81C /* satisfy.ttf */; };
@@ -37,7 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		56057ACC240681FB001789C5 /* GoogleService-Info-3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-3.plist"; sourceTree = "<group>"; };
+		56057ACC240681FB001789C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		569B868D240242E7001DC81C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		569B86AB24024FBB001DC81C /* marck_script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = marck_script.ttf; sourceTree = "<group>"; };
 		569B86AC24024FBC001DC81C /* satisfy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = satisfy.ttf; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 				56AA1E2B24019B1A001156A1 /* Assets.xcassets */,
 				56AA1E2D24019B1A001156A1 /* LaunchScreen.storyboard */,
 				56AA1E3024019B1A001156A1 /* Info.plist */,
-				56057ACC240681FB001789C5 /* GoogleService-Info-3.plist */,
+				56057ACC240681FB001789C5 /* GoogleService-Info.plist */,
 			);
 			path = WallPaperApp;
 			sourceTree = "<group>";
@@ -294,7 +294,7 @@
 				56AA1E2C24019B1A001156A1 /* Assets.xcassets in Resources */,
 				569B86BC24024FBC001DC81C /* delius_swash_caps.ttf in Resources */,
 				569B86BE24024FBC001DC81C /* aldrich.ttf in Resources */,
-				56057ACD240681FB001789C5 /* GoogleService-Info-3.plist in Resources */,
+				56057ACD240681FB001789C5 /* GoogleService-Info.plist in Resources */,
 				569B86C124024FBC001DC81C /* trade_winds.ttf in Resources */,
 				569B86B724024FBC001DC81C /* marck_script.ttf in Resources */,
 				569B86C224024FBC001DC81C /* abril_fatface.ttf in Resources */,
