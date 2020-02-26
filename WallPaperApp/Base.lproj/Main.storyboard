@@ -661,6 +661,9 @@
                                                                         <state key="normal" title="Birthday Frames">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="framesButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="4iD-oY-xaZ"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFb-GN-0Nx">
                                                                         <rect key="frame" x="52.5" y="85" width="230" height="50"/>
@@ -673,6 +676,9 @@
                                                                         <state key="normal" title="Endearment Frames">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="framesButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="Z1e-ZQ-X5B"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NN-Xa-PFg">
                                                                         <rect key="frame" x="52.5" y="170" width="230" height="50"/>
@@ -685,6 +691,9 @@
                                                                         <state key="normal" title="Matrimonial Frames">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="framesButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="Jrp-OL-pO1"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joa-Ft-bfy">
                                                                         <rect key="frame" x="52.5" y="255" width="230" height="50"/>
@@ -697,6 +706,9 @@
                                                                         <state key="normal" title="Memorial Frames">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="framesButtonPressed:" destination="GM4-Xr-VqT" eventType="touchUpInside" id="tfa-bA-qAB"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmZ-z4-t0T">
                                                                         <rect key="frame" x="52.5" y="340" width="230" height="50"/>

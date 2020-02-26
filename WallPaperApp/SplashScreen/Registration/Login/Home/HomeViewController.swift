@@ -41,4 +41,11 @@ class HomeViewController: UIViewController {
 
     }
     
+    @IBAction func framesButtonPressed(_ sender: UIButton) {
+        
+        if let buttonName = sender.title(for: .normal){
+            print(buttonName)
+        }
+        
+    }
 }
