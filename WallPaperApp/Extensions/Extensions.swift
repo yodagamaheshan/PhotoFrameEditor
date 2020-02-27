@@ -28,7 +28,7 @@ extension UIColor{
 
 extension UIFont{
     
-    enum AppFont: String{
+    enum AppFont: String, CaseIterable{
         case abeezee
         case abrilFatface = "abril_fatface"
         case aguafinaScript = "aguafina_script"
@@ -43,7 +43,7 @@ extension UIFont{
         case tradeWinds = "trade_winds"
     }
     
-    func getAppFont(font: AppFont) -> UIFont?{
+   static func getAppFont(font: AppFont) -> UIFont?{
         return UIFont(name: font.rawValue, size: 22)
     }
     
