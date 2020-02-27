@@ -14,11 +14,19 @@ class TextInputViewController: UIViewController {
     @IBOutlet weak var fontCollectionView: UICollectionView!
     @IBOutlet weak var textView: UITextView!
     
+    var allFonts = UIFont.AppFont.allCases
+    var isHiddenFontCollection: Bool = false{
+        didSet{
+            fontCollectionView.isHidden = isHiddenFontCollection
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        // Do any additional setup after loading the view.
+        fontCollectionView.dataSource = self
+        fontCollectionView.delegate = self
+        fontCollectionView.register(UINib(nibName: String(describing: FontPreviewCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: FontPreviewCollectionViewCell.self))
     }
     
     override func viewDidLayoutSubviews() {
@@ -30,7 +38,7 @@ class TextInputViewController: UIViewController {
     }
     
     @IBAction func fotToggleButtonPressed(_ sender: Any) {
-        
+        isHiddenFontCollection.toggle()
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
