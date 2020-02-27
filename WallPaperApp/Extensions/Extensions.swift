@@ -28,6 +28,25 @@ extension UIColor{
 
 extension UIFont{
     
+    enum AppFont: String{
+        case abeezee
+        case abrilFatface = "abril_fatface"
+        case aguafinaScript = "aguafina_script"
+        case aldrich
+        case altMateyV2Black = "alt_matey_v2_black"
+        case deliusSwashCaps = "delius_swash_caps"
+        case marckScript = "marck_script"
+        case outshineRegular = "outshine_regular"
+        case pattaya
+        case satisfy
+        case spicyRice = "spicy_rice"
+        case tradeWinds = "trade_winds"
+    }
+    
+    func getAppFont(font: AppFont) -> UIFont?{
+        return UIFont(name: font.rawValue, size: 22)
+    }
+    
 }
 
 extension UIViewController{
@@ -57,3 +76,4 @@ extension UIView{
     }
     
 }
+
