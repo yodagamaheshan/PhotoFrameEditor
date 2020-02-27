@@ -33,6 +33,7 @@ class RegisterViewController: UIViewController {
             backgroundView.styleWithRoundCorner(with: UIColor.white , filling:  UIColor.getAppColor(color: .creem) ?? UIColor.white)
         }
         sugnupButton.styleForRoundCorners()
+        sugnupButton.backgroundColor = UIColor.getAppColor(color: .lightYellow)
     }
     
     @IBAction func signupButtonPressed(_ sender: Any) {

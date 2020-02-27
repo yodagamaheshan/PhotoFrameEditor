@@ -3,7 +3,6 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -81,7 +80,7 @@
                                                                                         <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="username"/>
                                                                                     </textField>
                                                                                 </subviews>
-                                                                                <color key="backgroundColor" name="creem"/>
+                                                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="50" id="7AY-9j-Aee"/>
                                                                                     <constraint firstItem="ARi-pW-TwS" firstAttribute="top" secondItem="OEI-Wm-gLU" secondAttribute="top" id="7OK-7e-WbA"/>
@@ -130,7 +129,7 @@
                                                                     </stackView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2M4-6o-1S4">
                                                                         <rect key="frame" x="92.5" y="222" width="150" height="30"/>
-                                                                        <color key="backgroundColor" name="lightYellow"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="BQq-kU-WVf"/>
                                                                         </constraints>
@@ -635,7 +634,6 @@
                                     </view>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v3O-tW-Iuh">
                                         <rect key="frame" x="18" y="78" width="339" height="40"/>
-                                        <color key="backgroundColor" name="alphaBlack"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jK1-O8-dO8">
                                             <size key="itemSize" width="50" height="30"/>
                                             <size key="estimatedItemSize" width="50" height="25"/>
@@ -757,7 +755,7 @@
                                                                     </stackView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMf-id-bTD">
                                                                         <rect key="frame" x="92.5" y="156" width="150" height="30"/>
-                                                                        <color key="backgroundColor" name="lightYellow"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="6EV-cl-Jls"/>
                                                                         </constraints>
@@ -938,7 +936,7 @@
                                                                     </stackView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-m4-hWC">
                                                                         <rect key="frame" x="92.5" y="91" width="150" height="30"/>
-                                                                        <color key="backgroundColor" name="lightYellow"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="brn-qD-l0T"/>
                                                                         </constraints>
@@ -1045,7 +1043,7 @@
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAU-gJ-nRG">
                                                                         <rect key="frame" x="52.5" y="0.0" width="230" height="50"/>
-                                                                        <color key="backgroundColor" name="darkGray"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="3i5-nh-nJU"/>
                                                                             <constraint firstAttribute="height" constant="50" id="7xl-Ah-GyJ"/>
@@ -1060,7 +1058,7 @@
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFb-GN-0Nx">
                                                                         <rect key="frame" x="52.5" y="85" width="230" height="50"/>
-                                                                        <color key="backgroundColor" name="darkGray"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="1RR-fr-JAZ"/>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="cJH-ZE-Hhc"/>
@@ -1075,7 +1073,7 @@
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9NN-Xa-PFg">
                                                                         <rect key="frame" x="52.5" y="170" width="230" height="50"/>
-                                                                        <color key="backgroundColor" name="darkGray"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="99U-8X-bqv"/>
                                                                             <constraint firstAttribute="height" constant="50" id="bLq-7X-WeJ"/>
@@ -1090,7 +1088,7 @@
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joa-Ft-bfy">
                                                                         <rect key="frame" x="52.5" y="255" width="230" height="50"/>
-                                                                        <color key="backgroundColor" name="darkGray"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="66o-Qs-HiS"/>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="SQ2-nd-5oX"/>
@@ -1105,7 +1103,7 @@
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmZ-z4-t0T">
                                                                         <rect key="frame" x="52.5" y="340" width="230" height="50"/>
-                                                                        <color key="backgroundColor" name="darkGray"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="230" id="FEU-LZ-STk"/>
                                                                             <constraint firstAttribute="height" constant="50" id="w9X-22-puS"/>
@@ -1216,17 +1214,5 @@
     <resources>
         <image name="form" width="360" height="640"/>
         <image name="splashScreenImage" width="360" height="640"/>
-        <namedColor name="alphaBlack">
-            <color red="0.0" green="0.0" blue="0.0" alpha="0.16469520246478872" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="creem">
-            <color red="0.95294117647058818" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="darkGray">
-            <color red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="lightYellow">
-            <color red="0.9137254901960784" green="0.80392156862745101" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
     </resources>
 </document>

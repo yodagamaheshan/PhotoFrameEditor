@@ -23,7 +23,33 @@ extension UIColor{
     }
     
    static func getAppColor(color: AppColor) -> UIColor? {
+    if #available(iOS 11.0, *) {
         return UIColor(named: color.rawValue)
+    } else {
+       return getColorForIOS10(color: color)
+    }
+    }
+    
+    static func getColorForIOS10(color: AppColor) -> UIColor?{
+        switch color {
+        case .darkYellow:
+            return UIColor(red: 236, green: 243, blue: 111, alpha: 1)
+        
+        case .lightYellow:
+            return UIColor(red: 233, green: 205, blue: 21, alpha: 1)
+        case .pink:
+            return UIColor(red: 216, green: 27, blue: 96, alpha: 1)
+        case .creem:
+            return UIColor(red: 243, green: 238, blue: 238, alpha: 1)
+        case .darkBlackBlue:
+            return UIColor(red: 17, green: 34, blue: 51, alpha: 1)
+        case .darkGray:
+            return UIColor(red: 70, green: 70, blue: 70, alpha: 1)
+        case .darkGreen:
+            return UIColor(red: 6, green: 50, blue: 54, alpha: 1)
+        case .alphaBlack:
+            return UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 0.2)
+        }
     }
 }
 

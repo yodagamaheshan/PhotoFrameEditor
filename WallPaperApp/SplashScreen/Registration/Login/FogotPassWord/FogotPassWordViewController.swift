@@ -29,6 +29,7 @@ class FogotPassWordViewController: UIViewController {
     func setupViews(){
         textFieldBackgrund.styleWithRoundCorner(with: UIColor.getAppColor(color: .creem) ?? UIColor.white, filling: UIColor.white)
         button.styleForRoundCorners()
+        button.backgroundColor = UIColor.getAppColor(color: .lightYellow)
     }
    
     @IBAction func resetPassword(_ sender: Any) {

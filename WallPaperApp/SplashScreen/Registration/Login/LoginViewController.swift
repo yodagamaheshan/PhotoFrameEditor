@@ -32,6 +32,7 @@ class LoginViewController: UIViewController {
            backgroundView.styleWithRoundCorner(with: UIColor.white, filling:  UIColor.getAppColor(color: .creem) ?? UIColor.white )
         }
         loginButton.styleForRoundCorners()
+        loginButton.backgroundColor = UIColor.getAppColor(color: .lightYellow)
     }
     
     @IBAction func login(_ sender: Any) {

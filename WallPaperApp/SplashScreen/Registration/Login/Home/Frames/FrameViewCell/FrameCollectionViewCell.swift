@@ -20,6 +20,7 @@ class FrameCollectionViewCell: UICollectionViewCell {
     
     func setupViews(){
         unlockButton.layer.cornerRadius = 8
+        unlockButton.backgroundColor = UIColor.getAppColor(color: .lightYellow)
     }
 
     @IBAction func unlockThisFrame(_ sender: Any) {
