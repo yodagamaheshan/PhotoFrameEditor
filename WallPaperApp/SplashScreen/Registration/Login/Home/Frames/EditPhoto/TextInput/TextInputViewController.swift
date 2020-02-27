@@ -46,6 +46,20 @@ class TextInputViewController: UIViewController {
     }
     
 }
+
+extension TextInputViewController: UICollectionViewDataSource, UICollectionViewDelegate{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return allFonts.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FontPreviewCollectionViewCell.self), for: indexPath) as! FontPreviewCollectionViewCell
+        cell.setFont(font: allFonts[indexPath.row])
+        return cell
+    }
+    
+    
+}
   extension UITextView {
 
     func centerVertically() {
