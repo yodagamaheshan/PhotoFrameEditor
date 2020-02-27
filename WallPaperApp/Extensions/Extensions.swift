@@ -30,21 +30,22 @@ extension UIFont{
     
     enum AppFont: String, CaseIterable{
         case abeezee
-        case abrilFatface = "abril_fatface"
-        case aguafinaScript = "aguafina_script"
-        case aldrich
-        case altMateyV2Black = "alt_matey_v2_black"
-        case deliusSwashCaps = "delius_swash_caps"
-        case marckScript = "marck_script"
-        case outshineRegular = "outshine_regular"
-        case pattaya
-        case satisfy
-        case spicyRice = "spicy_rice"
-        case tradeWinds = "trade_winds"
+        case abrilFatface = "Abril Fatface"
+        case aguafinaScript = "Aguafina Script"
+        case aldrich = "Aldrich"
+        case altMateyV2Black = "Alt Matey v2"
+        case deliusSwashCaps = "Delius Swash Caps"
+        case marckScript = "Marck Script"
+        case outshineRegular = "Outshine"
+        case pattaya = "Pattaya"
+        case satisfy = "Satisfy"
+        case spicyRice = "Spicy Rice"
+        case tradeWinds = "Trade Winds"
     }
     
    static func getAppFont(font: AppFont) -> UIFont?{
-        return UIFont(name: font.rawValue, size: 22)
+    
+        return UIFont(name: font.rawValue, size: 13)
     }
     
 }
