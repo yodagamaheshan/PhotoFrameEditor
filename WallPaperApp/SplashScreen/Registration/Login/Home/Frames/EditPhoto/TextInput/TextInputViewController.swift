@@ -30,9 +30,15 @@ class TextInputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViews()
+        textView.delegate = self
         fontCollectionView.dataSource = self
         fontCollectionView.delegate = self
         fontCollectionView.register(UINib(nibName: String(describing: FontPreviewCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: FontPreviewCollectionViewCell.self))
+    }
+    func setupViews(){
+        textView.text = "Enter text..."
+        textView.textColor = UIColor.lightGray
     }
     
     override func viewDidLayoutSubviews() {
@@ -67,6 +73,23 @@ extension TextInputViewController: UICollectionViewDataSource, UICollectionViewD
         selectedFont = allFonts[indexPath.row]
     }
     
+}
+
+extension TextInputViewController: UITextViewDelegate{
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Placeholder"
+            textView.textColor = UIColor.lightGray
+        }
+    }
+
 }
   extension UITextView {
 
