@@ -8,6 +8,13 @@
 
 import UIKit
 
+protocol TextInputViewControllerDelegate {
+    /// - Parameters:
+    ///   - text: user entered text
+    ///   - font: font name and the size
+    func suerDidSelect(text: String, font: UIFont)
+}
+
 class TextInputViewController: UIViewController {
 
     @IBOutlet weak var fontSizeTextField: UITextField!
@@ -30,6 +37,7 @@ class TextInputViewController: UIViewController {
             setFontAndFontSize()
         }
     }
+    var delegate: TextInputViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +48,7 @@ class TextInputViewController: UIViewController {
         fontCollectionView.delegate = self
         fontCollectionView.register(UINib(nibName: String(describing: FontPreviewCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: FontPreviewCollectionViewCell.self))
     }
+    
     func setupViews(){
         textView.text = "Enter text..."
         textView.textColor = UIColor.lightGray
@@ -68,6 +77,7 @@ class TextInputViewController: UIViewController {
     @IBAction func editingEnd(_ sender: UITextField) {
        print(sender.text)
     }
+    
     @IBAction func editingChanged(_ sender: UITextField) {
         if let size = Int(sender.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""){
             selectedFontSize = size
@@ -110,7 +120,6 @@ extension TextInputViewController: UITextViewDelegate{
 
 }
   extension UITextView {
-
     func centerVertically() {
         let fittingSize = CGSize(width: bounds.width, height: CGFloat.greatestFiniteMagnitude)
         let size = sizeThatFits(fittingSize)
@@ -118,5 +127,4 @@ extension TextInputViewController: UITextViewDelegate{
         let positiveTopOffset = max(1, topOffset)
         contentOffset.y = -positiveTopOffset
     }
-
 }
