@@ -16,8 +16,10 @@ class FontPreviewCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func setFont(font: UIFont){
-        nameLabel.font = font
+    func setFont(font: UIFont.AppFont){
+        if let font = UIFont.getAppFont(font: font){
+            nameLabel.font = font
+        }
     }
 
 }

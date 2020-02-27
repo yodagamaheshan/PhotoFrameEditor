@@ -20,6 +20,7 @@ class TextInputViewController: UIViewController {
             fontCollectionView.isHidden = isHiddenFontCollection
         }
     }
+    var selectedFont: UIFont.AppFont = .deliusSwashCaps
     
     override func viewDidLoad() {
         super.viewDidLoad()
