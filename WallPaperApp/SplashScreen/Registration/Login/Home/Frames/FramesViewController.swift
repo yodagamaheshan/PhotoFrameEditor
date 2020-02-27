@@ -8,6 +8,13 @@
 
 import UIKit
 
+
+struct Frame {
+    let frameName: String
+    let imageURL: String
+    let unlock: Bool
+}
+
 class FramesViewController: UIViewController {
 
     override func viewDidLoad() {
