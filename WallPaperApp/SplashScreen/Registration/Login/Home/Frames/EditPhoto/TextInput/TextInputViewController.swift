@@ -20,7 +20,12 @@ class TextInputViewController: UIViewController {
             fontCollectionView.isHidden = isHiddenFontCollection
         }
     }
-    var selectedFont: UIFont.AppFont = .deliusSwashCaps
+    var selectedFont: UIFont.AppFont = UIFont.AppFont.abeezee {
+        didSet{
+            textView.font = UIFont.getAppFont(font: selectedFont)
+            textView.centerVertically()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +63,9 @@ extension TextInputViewController: UICollectionViewDataSource, UICollectionViewD
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedFont = allFonts[indexPath.row]
+    }
     
 }
   extension UITextView {
