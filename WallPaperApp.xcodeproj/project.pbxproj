@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		56057ACD240681FB001789C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56057ACC240681FB001789C5 /* GoogleService-Info.plist */; };
+		568B54F124077056007BA2D4 /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568B54F024077056007BA2D4 /* TextInputViewController.swift */; };
+		568B54F52407732F007BA2D4 /* FontPreviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568B54F32407732F007BA2D4 /* FontPreviewCollectionViewCell.swift */; };
+		568B54F62407732F007BA2D4 /* FontPreviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 568B54F42407732F007BA2D4 /* FontPreviewCollectionViewCell.xib */; };
 		569B868E240242E7001DC81C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569B868D240242E7001DC81C /* Extensions.swift */; };
 		569B86B724024FBC001DC81C /* marck_script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569B86AB24024FBB001DC81C /* marck_script.ttf */; };
 		569B86B824024FBC001DC81C /* satisfy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 569B86AC24024FBC001DC81C /* satisfy.ttf */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		56057ACC240681FB001789C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		568B54F024077056007BA2D4 /* TextInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
+		568B54F32407732F007BA2D4 /* FontPreviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontPreviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		568B54F42407732F007BA2D4 /* FontPreviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FontPreviewCollectionViewCell.xib; sourceTree = "<group>"; };
 		569B868D240242E7001DC81C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		569B86AB24024FBB001DC81C /* marck_script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = marck_script.ttf; sourceTree = "<group>"; };
 		569B86AC24024FBC001DC81C /* satisfy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = satisfy.ttf; sourceTree = "<group>"; };
@@ -93,6 +99,24 @@
 				ED497697AF42808AD8B2F643 /* Pods-WallPaperApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		568B54EF24077025007BA2D4 /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
+				568B54F2240772FD007BA2D4 /* FontPreviewCollectionViewCell */,
+				568B54F024077056007BA2D4 /* TextInputViewController.swift */,
+			);
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		568B54F2240772FD007BA2D4 /* FontPreviewCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				568B54F32407732F007BA2D4 /* FontPreviewCollectionViewCell.swift */,
+				568B54F42407732F007BA2D4 /* FontPreviewCollectionViewCell.xib */,
+			);
+			path = FontPreviewCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		569B868C240242CC001DC81C /* Extensions */ = {
@@ -171,6 +195,7 @@
 		569B86F324025A53001DC81C /* EditPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				568B54EF24077025007BA2D4 /* TextInput */,
 				569B86F424025BD5001DC81C /* EditPhotoViewController.swift */,
 			);
 			path = EditPhoto;
@@ -313,6 +338,7 @@
 				569B86C124024FBC001DC81C /* trade_winds.ttf in Resources */,
 				569B86B724024FBC001DC81C /* marck_script.ttf in Resources */,
 				569B86C224024FBC001DC81C /* abril_fatface.ttf in Resources */,
+				568B54F62407732F007BA2D4 /* FontPreviewCollectionViewCell.xib in Resources */,
 				56AA1E2A24019B13001156A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,8 +394,10 @@
 			files = (
 				569B86CC2402543C001DC81C /* LoginViewController.swift in Sources */,
 				569B86CE24025456001DC81C /* FogotPassWordViewController.swift in Sources */,
+				568B54F52407732F007BA2D4 /* FontPreviewCollectionViewCell.swift in Sources */,
 				569B86F224025A46001DC81C /* FramesViewController.swift in Sources */,
 				569B86D024025464001DC81C /* HomeViewController.swift in Sources */,
+				568B54F124077056007BA2D4 /* TextInputViewController.swift in Sources */,
 				569B86CA24025425001DC81C /* RegisterViewController.swift in Sources */,
 				569C50DD2406A8220074FB0D /* FrameCollectionViewCell.swift in Sources */,
 				56AA1E2324019B13001156A1 /* AppDelegate.swift in Sources */,
