@@ -44,9 +44,9 @@ extension UIFont{
         case tradeWinds = "Trade Winds"
     }
     
-   static func getAppFont(font: AppFont) -> UIFont?{
+    static func getAppFont(font: AppFont, with size: Int = 13) -> UIFont?{
     
-        return UIFont(name: font.rawValue, size: 13)
+        return UIFont(name: font.rawValue, size: CGFloat(size))
     }
     
 }

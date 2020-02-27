@@ -22,8 +22,12 @@ class TextInputViewController: UIViewController {
     }
     var selectedFont: UIFont.AppFont = UIFont.AppFont.abeezee {
         didSet{
-            textView.font = UIFont.getAppFont(font: selectedFont)
-            textView.centerVertically()
+            setFontAndFontSize()
+        }
+    }
+    var selectedFontSize: Int = 13{
+        didSet{
+            setFontAndFontSize()
         }
     }
     
@@ -45,6 +49,11 @@ class TextInputViewController: UIViewController {
         textView.centerVertically()
     }
 
+    func setFontAndFontSize(){
+        textView.font = UIFont.getAppFont(font: selectedFont, with: selectedFontSize)
+        textView.centerVertically()
+    }
+    
     @IBAction func colorPickerButtonPressed(_ sender: Any) {
         
     }
@@ -54,6 +63,15 @@ class TextInputViewController: UIViewController {
     }
     
     @IBAction func doneButtonPressed(_ sender: Any) {
+    }
+ 
+    @IBAction func editingEnd(_ sender: UITextField) {
+       print(sender.text)
+    }
+    @IBAction func editingChanged(_ sender: UITextField) {
+        if let size = Int(sender.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""){
+            selectedFontSize = size
+        }
     }
     
 }
