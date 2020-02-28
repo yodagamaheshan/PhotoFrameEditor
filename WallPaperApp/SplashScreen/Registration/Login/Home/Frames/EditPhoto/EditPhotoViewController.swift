@@ -46,9 +46,11 @@ class EditPhotoViewController: UIViewController {
     }
     
     @IBAction func downloadImageButtonPressed(_ sender: Any) {
-        editedImage = currentImage
-        guard let image = editedImage else { return }
         
+        let renderer = UIGraphicsImageRenderer(size: editingAreaView.bounds.size)
+        let image = renderer.image { ctx in
+            editingAreaView.drawHierarchy(in: editingAreaView.bounds, afterScreenUpdates: true)
+        }
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
