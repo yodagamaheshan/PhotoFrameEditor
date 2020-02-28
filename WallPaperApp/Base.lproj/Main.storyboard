@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X6N-li-rF8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KLI-aR-FMx">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -236,11 +237,12 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Dfb-IY-f6o">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8nQ-q8-zAa">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8nQ-q8-zAa">
                                     <size key="itemSize" width="165" height="177"/>
+                                    <size key="estimatedItemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
@@ -270,6 +272,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyx-yN-72P">
+                                <rect key="frame" x="0.0" y="44" width="375" height="563"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyFrame" translatesAutoresizingMaskIntoConstraints="NO" id="DB4-zO-S2t">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="DB4-zO-S2t" firstAttribute="top" secondItem="Gyx-yN-72P" secondAttribute="top" id="AFG-h0-uWX"/>
+                                    <constraint firstItem="DB4-zO-S2t" firstAttribute="leading" secondItem="Gyx-yN-72P" secondAttribute="leading" id="mtt-kt-fNc"/>
+                                    <constraint firstAttribute="trailing" secondItem="DB4-zO-S2t" secondAttribute="trailing" id="wWY-ec-Lcu"/>
+                                    <constraint firstAttribute="bottom" secondItem="DB4-zO-S2t" secondAttribute="bottom" id="zSX-na-B3s"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFZ-iE-uvT">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
                                 <subviews>
@@ -478,25 +495,23 @@
                                     <constraint firstAttribute="trailing" secondItem="Lmi-GY-Qf9" secondAttribute="trailing" constant="1" id="tns-6Z-GPG"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ARc-4y-T0T">
-                                <rect key="frame" x="32" y="126" width="327" height="413"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="7aT-jW-G6I" firstAttribute="trailing" secondItem="ARc-4y-T0T" secondAttribute="trailing" constant="16" id="FH0-aM-oZh"/>
                             <constraint firstItem="WFZ-iE-uvT" firstAttribute="bottom" secondItem="7aT-jW-G6I" secondAttribute="bottom" id="O1I-aa-Y9t"/>
-                            <constraint firstItem="ARc-4y-T0T" firstAttribute="leading" secondItem="7aT-jW-G6I" secondAttribute="leading" constant="32" id="QPw-s0-BJI"/>
-                            <constraint firstItem="WFZ-iE-uvT" firstAttribute="top" secondItem="ARc-4y-T0T" secondAttribute="bottom" constant="68" id="lQJ-ch-iPs"/>
+                            <constraint firstItem="Gyx-yN-72P" firstAttribute="top" secondItem="7aT-jW-G6I" secondAttribute="top" id="VAY-pj-XKo"/>
                             <constraint firstItem="WFZ-iE-uvT" firstAttribute="leading" secondItem="7aT-jW-G6I" secondAttribute="leading" id="ocl-Qr-LDs"/>
-                            <constraint firstItem="ARc-4y-T0T" firstAttribute="top" secondItem="7aT-jW-G6I" secondAttribute="top" constant="82" id="p7H-GB-hHi"/>
+                            <constraint firstItem="7aT-jW-G6I" firstAttribute="trailing" secondItem="Gyx-yN-72P" secondAttribute="trailing" id="pxa-um-5Be"/>
                             <constraint firstItem="7aT-jW-G6I" firstAttribute="trailing" secondItem="WFZ-iE-uvT" secondAttribute="trailing" id="wwD-RQ-hbc"/>
+                            <constraint firstItem="Gyx-yN-72P" firstAttribute="leading" secondItem="7aT-jW-G6I" secondAttribute="leading" id="y9r-xR-nwe"/>
+                            <constraint firstItem="WFZ-iE-uvT" firstAttribute="top" secondItem="Gyx-yN-72P" secondAttribute="bottom" id="yBA-PB-VQs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7aT-jW-G6I"/>
                     </view>
                     <navigationItem key="navigationItem" id="SjQ-zT-xZO"/>
                     <connections>
-                        <outlet property="imageView" destination="ARc-4y-T0T" id="35H-D2-ENu"/>
+                        <outlet property="editingAreaView" destination="Gyx-yN-72P" id="Vc4-fB-bUi"/>
+                        <outlet property="frameImageView" destination="DB4-zO-S2t" id="cLf-4s-PTd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khc-xQ-KkM" sceneMemberID="firstResponder"/>
@@ -1212,6 +1227,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dummyFrame" width="180" height="210"/>
         <image name="form" width="360" height="640"/>
         <image name="splashScreenImage" width="360" height="640"/>
     </resources>

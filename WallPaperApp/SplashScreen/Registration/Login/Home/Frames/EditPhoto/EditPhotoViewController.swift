@@ -9,14 +9,21 @@
 import UIKit
 
 class EditPhotoViewController: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
+    
+    
+    @IBOutlet weak var editingAreaView: UIView!
+    @IBOutlet weak var frameImageView: UIImageView!
     var currentImage: UIImage!
     var editedImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupViews()
         // Do any additional setup after loading the view.
+    }
+    
+    func setupViews(){
+        frameImageView.layer.zPosition = 1
     }
     
     @IBAction func chooseImageButtonPressed(_ sender: Any) {
@@ -67,6 +74,47 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
         dismiss(animated: true)
 
         currentImage = image
-        imageView.image = currentImage
+        let imageView = UIImageView(image: currentImage)
+        imageView.layer.borderWidth = 10
+        imageView.layer.borderColor = UIColor.red.cgColor
+        imageView.frame = CGRect(x: 0, y: 0, width: imageView.frame.size.width, height: imageView.frame.size.height)
+        editingAreaView.addSubview(imageView)
+        imageView.isUserInteractionEnabled = true
+        
+        addGestures(to: imageView)
+    }
+    
+    func addGestures(to imageView: UIImageView){
+        let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(self.myPinchGesture))
+        imageView.addGestureRecognizer(pinchGestureRecognizer)
+        
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(myPanGesture(sender:)))
+        imageView.addGestureRecognizer(panGestureRecognizer)
+
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(myTapGesture(sender:)))
+        imageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func myPinchGesture(sender: UIPinchGestureRecognizer){
+        sender.view?.transform = (sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale))!
+        sender.scale = 1
+    }
+    
+    @objc func myPanGesture(sender: UIPanGestureRecognizer){
+    let translation = sender.translation(in: self.view)
+        if let view = sender.view {
+            view.center = CGPoint(x: view.center.x + translation.x, y: view.center.y + translation.y)
+        }
+        
+        sender.setTranslation(CGPoint.zero, in: self.view)
+        
+    }
+    
+     @objc func myTapGesture(sender: UITapGestureRecognizer){
+        if let imageView = sender.view{
+            editingAreaView.bringSubviewToFront(imageView)
+        }
+        
     }
 }
+
