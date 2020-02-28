@@ -129,7 +129,15 @@ extension TextInputViewController: UITextViewDelegate{
     }
 
 }
-  extension UITextView {
+
+extension TextInputViewController: UITextFieldDelegate{
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+
+        return true
+    }
+}
+extension UITextView {
     func centerVertically() {
         let fittingSize = CGSize(width: bounds.width, height: CGFloat.greatestFiniteMagnitude)
         let size = sizeThatFits(fittingSize)
