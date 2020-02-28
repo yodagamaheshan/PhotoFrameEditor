@@ -14,8 +14,8 @@ class EditPhotoViewController: UIViewController {
     @IBOutlet weak var editingAreaView: UIView!
     @IBOutlet weak var frameImageView: UIImageView!
     @IBOutlet weak var textEditingLayer: UIView!
+    @IBOutlet weak var textLabel: UILabel!
     
-    var currentImage: UIImage!
     var editedImage: UIImage?
     var currentlyEditingImage: UIView = UIView() {
         willSet{
@@ -32,9 +32,18 @@ class EditPhotoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(textPanned))
+        textLabel.addGestureRecognizer(panGestureRecognizer)
+        
+        let pinchGuesterRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(textPinch))
+        textLabel.addGestureRecognizer(pinchGuesterRecognizer)
+    }
+    
     func setupViews(){
         navigationController?.isNavigationBarHidden = true
         frameImageView.layer.zPosition = 1
+        textLabel.layer.zPosition = 2
     }
     
     @IBAction func chooseImageButtonPressed(_ sender: Any) {
@@ -50,6 +59,10 @@ class EditPhotoViewController: UIViewController {
     }
     
     @IBAction func addTextButtonPressed(_ sender: Any) {
+        
+        
+        
+
     }
     
     @IBAction func deleteImageButtonPresed(_ sender: Any) {
@@ -87,16 +100,21 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
         
         dismiss(animated: true)
         
-        currentImage = image
-        let imageView = UIImageView(image: currentImage)
+        let imageView = UIImageView(image: image)
+        imageView.frame = CGRect(x: (editingAreaView.center.x + editingAreaView.center.x/2), y: (editingAreaView.center.y - editingAreaView.center.y/2), width: imageView.bounds.size.width/5, height: imageView.bounds.size.height/5)
+        imageView.center = editingAreaView.center
+        imageView.contentMode = .scaleToFill
         currentlyEditingImage = imageView
-        imageView.frame = CGRect(x: 0, y: 0, width: imageView.frame.size.width, height: imageView.frame.size.height)
         editingAreaView.addSubview(imageView)
         imageView.isUserInteractionEnabled = true
         
         addGestures(to: imageView)
     }
     
+}
+
+//MARK:images
+extension EditPhotoViewController{
     func addBorderTo(view: UIView){
         let yourViewBorder = CAShapeLayer()
         yourViewBorder.strokeColor = UIColor.black.cgColor
@@ -159,5 +177,27 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
             sender.rotation = 0
         }
     }
+}
+
+//MARK: text
+extension EditPhotoViewController{
+    
+    @objc func textPanned(sender: UIPanGestureRecognizer) {
+        let translation = sender.translation(in: editingAreaView)
+        if let textView = sender.view {
+            textView.center = CGPoint(x: textView.center.x + translation.x, y: textView.center.y + translation.y)
+        }
+        
+        sender.setTranslation(CGPoint.zero, in: editingAreaView)
+        
+    }
+    
+    @objc func textPinch(sender: UIPinchGestureRecognizer){
+        
+        sender.view?.transform = (sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale))!
+        sender.scale = 1
+        
+    }
+    
 }
 

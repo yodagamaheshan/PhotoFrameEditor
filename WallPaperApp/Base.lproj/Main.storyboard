@@ -278,22 +278,36 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyFrame" translatesAutoresizingMaskIntoConstraints="NO" id="DB4-zO-S2t">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivC-Ep-EGL">
+                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7d-Eo-mFe">
+                                        <rect key="frame" x="118" y="245.5" width="139" height="72"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ivC-Ep-EGL">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
+                                    <constraint firstItem="A7d-Eo-mFe" firstAttribute="centerY" secondItem="Gyx-yN-72P" secondAttribute="centerY" id="3BC-Z1-0Ca"/>
                                     <constraint firstItem="DB4-zO-S2t" firstAttribute="top" secondItem="Gyx-yN-72P" secondAttribute="top" id="AFG-h0-uWX"/>
                                     <constraint firstItem="ivC-Ep-EGL" firstAttribute="top" secondItem="Gyx-yN-72P" secondAttribute="top" id="Vbz-47-hNJ"/>
                                     <constraint firstItem="ivC-Ep-EGL" firstAttribute="leading" secondItem="Gyx-yN-72P" secondAttribute="leading" id="bu0-CB-F1c"/>
                                     <constraint firstAttribute="trailing" secondItem="ivC-Ep-EGL" secondAttribute="trailing" id="dq5-3h-2OH"/>
                                     <constraint firstAttribute="bottom" secondItem="ivC-Ep-EGL" secondAttribute="bottom" id="gHG-rq-Rca"/>
                                     <constraint firstItem="DB4-zO-S2t" firstAttribute="leading" secondItem="Gyx-yN-72P" secondAttribute="leading" id="mtt-kt-fNc"/>
+                                    <constraint firstItem="A7d-Eo-mFe" firstAttribute="centerX" secondItem="Gyx-yN-72P" secondAttribute="centerX" id="vdM-IV-RdU"/>
                                     <constraint firstAttribute="trailing" secondItem="DB4-zO-S2t" secondAttribute="trailing" id="wWY-ec-Lcu"/>
                                     <constraint firstAttribute="bottom" secondItem="DB4-zO-S2t" secondAttribute="bottom" id="zSX-na-B3s"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="ivC-Ep-EGL"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFZ-iE-uvT">
                                 <rect key="frame" x="0.0" y="607" width="375" height="60"/>
@@ -521,6 +535,7 @@
                         <outlet property="editingAreaView" destination="Gyx-yN-72P" id="Vc4-fB-bUi"/>
                         <outlet property="frameImageView" destination="DB4-zO-S2t" id="cLf-4s-PTd"/>
                         <outlet property="textEditingLayer" destination="ivC-Ep-EGL" id="h3a-n0-xTC"/>
+                        <outlet property="textLabel" destination="A7d-Eo-mFe" id="35x-Kg-EDF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khc-xQ-KkM" sceneMemberID="firstResponder"/>
