@@ -23,6 +23,7 @@ class EditPhotoViewController: UIViewController {
     }
     
     func setupViews(){
+        navigationController?.isNavigationBarHidden = true
         frameImageView.layer.zPosition = 1
     }
     
