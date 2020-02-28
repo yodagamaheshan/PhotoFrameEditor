@@ -51,6 +51,7 @@ class EditPhotoViewController: UIViewController {
     }
     
     @IBAction func deleteImageButtonPresed(_ sender: Any) {
+        currentlyEditingImage.removeFromSuperview()
     }
     
     @IBAction func downloadImageButtonPressed(_ sender: Any) {
