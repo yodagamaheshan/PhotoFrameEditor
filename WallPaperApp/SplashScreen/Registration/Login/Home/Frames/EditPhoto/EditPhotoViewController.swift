@@ -78,13 +78,23 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
         
         currentImage = image
         let imageView = UIImageView(image: currentImage)
-        imageView.layer.borderWidth = 10
-        imageView.layer.borderColor = UIColor.red.cgColor
+        addBorderTo(view: imageView)
         imageView.frame = CGRect(x: 0, y: 0, width: imageView.frame.size.width, height: imageView.frame.size.height)
         editingAreaView.addSubview(imageView)
         imageView.isUserInteractionEnabled = true
         
         addGestures(to: imageView)
+    }
+    
+    func addBorderTo(view: UIView){
+        let yourViewBorder = CAShapeLayer()
+        yourViewBorder.strokeColor = UIColor.black.cgColor
+        yourViewBorder.lineDashPattern = [15, 15]
+        yourViewBorder.lineWidth = 5
+        yourViewBorder.frame = view.bounds
+        yourViewBorder.fillColor = nil
+        yourViewBorder.path = UIBezierPath(rect: view.bounds).cgPath
+        view.layer.addSublayer(yourViewBorder)
     }
     
     func addGestures(to imageView: UIImageView){
