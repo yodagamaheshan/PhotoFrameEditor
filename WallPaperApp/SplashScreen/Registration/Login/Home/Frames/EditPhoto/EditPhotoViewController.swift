@@ -97,6 +97,10 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
         view.layer.addSublayer(yourViewBorder)
     }
     
+    func removeBorder(from view: UIView){
+        view.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
+    }
+    
     func addGestures(to imageView: UIImageView){
         let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(self.myPinchGesture))
         imageView.addGestureRecognizer(pinchGestureRecognizer)
