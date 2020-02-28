@@ -124,17 +124,21 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
     }
     
     @objc func myPinchGesture(sender: UIPinchGestureRecognizer){
+        if let imageView = sender.view{
+            topImage = imageView
         sender.view?.transform = (sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale))!
         sender.scale = 1
+        }
     }
     
     @objc func myPanGesture(sender: UIPanGestureRecognizer){
-        let translation = sender.translation(in: self.view)
-        if let view = sender.view {
-            view.center = CGPoint(x: view.center.x + translation.x, y: view.center.y + translation.y)
+        let translation = sender.translation(in: editingAreaView)
+        if let imageView = sender.view {
+            topImage = imageView
+            imageView.center = CGPoint(x: imageView.center.x + translation.x, y: imageView.center.y + translation.y)
         }
         
-        sender.setTranslation(CGPoint.zero, in: self.view)
+        sender.setTranslation(CGPoint.zero, in: editingAreaView)
         
     }
     
@@ -146,8 +150,11 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
     }
     
     @objc func myRotationGesture(sender: UIRotationGestureRecognizer){
-        sender.view?.transform = (sender.view?.transform.rotated(by: sender.rotation))!
-        sender.rotation = 0
+        if let imageView = sender.view{
+            topImage = imageView
+            sender.view?.transform = (sender.view?.transform.rotated(by: sender.rotation))!
+            sender.rotation = 0
+        }
     }
 }
 
