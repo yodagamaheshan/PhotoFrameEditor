@@ -15,12 +15,12 @@ class EditPhotoViewController: UIViewController {
     @IBOutlet weak var frameImageView: UIImageView!
     var currentImage: UIImage!
     var editedImage: UIImage?
-    var topImage: UIView = UIView() {
+    var currentlyEditingImage: UIView = UIView() {
         willSet{
-            removeBorder(from: topImage)
+            removeBorder(from: currentlyEditingImage)
         }
         didSet{
-            addBorderTo(view: topImage)
+            addBorderTo(view: currentlyEditingImage)
         }
     }
     
@@ -54,7 +54,7 @@ class EditPhotoViewController: UIViewController {
     }
     
     @IBAction func downloadImageButtonPressed(_ sender: Any) {
-        
+        removeBorder(from: currentlyEditingImage)
         let renderer = UIGraphicsImageRenderer(size: editingAreaView.bounds.size)
         let image = renderer.image { ctx in
             editingAreaView.drawHierarchy(in: editingAreaView.bounds, afterScreenUpdates: true)
@@ -86,7 +86,7 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
         
         currentImage = image
         let imageView = UIImageView(image: currentImage)
-        topImage = imageView
+        currentlyEditingImage = imageView
         imageView.frame = CGRect(x: 0, y: 0, width: imageView.frame.size.width, height: imageView.frame.size.height)
         editingAreaView.addSubview(imageView)
         imageView.isUserInteractionEnabled = true
@@ -125,7 +125,7 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
     
     @objc func myPinchGesture(sender: UIPinchGestureRecognizer){
         if let imageView = sender.view{
-            topImage = imageView
+            currentlyEditingImage = imageView
         sender.view?.transform = (sender.view?.transform.scaledBy(x: sender.scale, y: sender.scale))!
         sender.scale = 1
         }
@@ -134,7 +134,7 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
     @objc func myPanGesture(sender: UIPanGestureRecognizer){
         let translation = sender.translation(in: editingAreaView)
         if let imageView = sender.view {
-            topImage = imageView
+            currentlyEditingImage = imageView
             imageView.center = CGPoint(x: imageView.center.x + translation.x, y: imageView.center.y + translation.y)
         }
         
@@ -144,14 +144,14 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
     
     @objc func myTapGesture(sender: UITapGestureRecognizer){
         if let imageView = sender.view{
-            topImage = imageView
+            currentlyEditingImage = imageView
             editingAreaView.bringSubviewToFront(imageView)
         }
     }
     
     @objc func myRotationGesture(sender: UIRotationGestureRecognizer){
         if let imageView = sender.view{
-            topImage = imageView
+            currentlyEditingImage = imageView
             sender.view?.transform = (sender.view?.transform.rotated(by: sender.rotation))!
             sender.rotation = 0
         }
