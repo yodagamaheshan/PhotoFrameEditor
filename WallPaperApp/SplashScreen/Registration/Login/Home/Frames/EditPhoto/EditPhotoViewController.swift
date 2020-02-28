@@ -48,11 +48,11 @@ class EditPhotoViewController: UIViewController {
     @IBAction func downloadImageButtonPressed(_ sender: Any) {
         editedImage = currentImage
         guard let image = editedImage else { return }
-
+        
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
-   @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         if let error = error {
             // we got back an error!
             let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
@@ -64,16 +64,16 @@ class EditPhotoViewController: UIViewController {
             present(ac, animated: true)
         }
     }
-
+    
 }
 
 extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let image = info[.editedImage] as? UIImage else { return }
-
+        
         dismiss(animated: true)
-
+        
         currentImage = image
         let imageView = UIImageView(image: currentImage)
         imageView.layer.borderWidth = 10
@@ -91,9 +91,12 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(myPanGesture(sender:)))
         imageView.addGestureRecognizer(panGestureRecognizer)
-
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(myTapGesture(sender:)))
         imageView.addGestureRecognizer(tapGestureRecognizer)
+        
+        let rotationGesturRecognizer = UIRotationGestureRecognizer(target: self, action: #selector(myRotationGesture(sender:)))
+        imageView.addGestureRecognizer(rotationGesturRecognizer)
     }
     
     @objc func myPinchGesture(sender: UIPinchGestureRecognizer){
@@ -102,7 +105,7 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
     }
     
     @objc func myPanGesture(sender: UIPanGestureRecognizer){
-    let translation = sender.translation(in: self.view)
+        let translation = sender.translation(in: self.view)
         if let view = sender.view {
             view.center = CGPoint(x: view.center.x + translation.x, y: view.center.y + translation.y)
         }
@@ -111,11 +114,15 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
         
     }
     
-     @objc func myTapGesture(sender: UITapGestureRecognizer){
+    @objc func myTapGesture(sender: UITapGestureRecognizer){
         if let imageView = sender.view{
             editingAreaView.bringSubviewToFront(imageView)
         }
-        
+    }
+    
+    @objc func myRotationGesture(sender: UIRotationGestureRecognizer){
+        sender.view?.transform = (sender.view?.transform.rotated(by: sender.rotation))!
+        sender.rotation = 0
     }
 }
 
