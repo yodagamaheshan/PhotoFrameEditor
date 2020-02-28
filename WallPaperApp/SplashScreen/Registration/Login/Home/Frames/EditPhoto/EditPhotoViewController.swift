@@ -15,6 +15,14 @@ class EditPhotoViewController: UIViewController {
     @IBOutlet weak var frameImageView: UIImageView!
     var currentImage: UIImage!
     var editedImage: UIImage?
+    var topImage: UIView = UIView() {
+        willSet{
+            removeBorder(from: topImage)
+        }
+        didSet{
+            addBorderTo(view: topImage)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,7 +86,7 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
         
         currentImage = image
         let imageView = UIImageView(image: currentImage)
-        addBorderTo(view: imageView)
+        topImage = imageView
         imageView.frame = CGRect(x: 0, y: 0, width: imageView.frame.size.width, height: imageView.frame.size.height)
         editingAreaView.addSubview(imageView)
         imageView.isUserInteractionEnabled = true
@@ -132,6 +140,7 @@ extension EditPhotoViewController: UIImagePickerControllerDelegate, UINavigation
     
     @objc func myTapGesture(sender: UITapGestureRecognizer){
         if let imageView = sender.view{
+            topImage = imageView
             editingAreaView.bringSubviewToFront(imageView)
         }
     }
