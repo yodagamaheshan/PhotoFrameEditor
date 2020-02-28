@@ -13,6 +13,8 @@ class EditPhotoViewController: UIViewController {
     
     @IBOutlet weak var editingAreaView: UIView!
     @IBOutlet weak var frameImageView: UIImageView!
+    @IBOutlet weak var textEditingLayer: UIView!
+    
     var currentImage: UIImage!
     var editedImage: UIImage?
     var currentlyEditingImage: UIView = UIView() {
