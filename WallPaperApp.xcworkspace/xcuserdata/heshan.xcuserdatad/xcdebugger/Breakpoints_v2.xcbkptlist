@@ -20,5 +20,69 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81D635D1-D119-4D49-8577-7FD3223696E9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WallPaperApp/SplashScreen/Registration/Login/Home/Frames/FramesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "listenForFireBaseData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE34A6B2-72C4-4FBC-B442-6B34D583CEDE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WallPaperApp/SplashScreen/Registration/Login/Home/Frames/FramesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "listenForFireBaseData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FE34A6B2-72C4-4FBC-B442-6B34D583CEDE - 7c7cc0e34b415ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in WallPaperApp.FramesViewController.listenForFireBaseData() -&gt; ()"
+                  moduleName = "WallPaperApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heshan/Developer/WallPaperApp/WallPaperApp/SplashScreen/Registration/Login/Home/Frames/FramesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  uuid = "FE34A6B2-72C4-4FBC-B442-6B34D583CEDE - 78b4154d36c29578"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;WallPaperApp.Frame&gt;) -&gt; () in closure #1 (__C.FIRDataSnapshot) -&gt; () in WallPaperApp.FramesViewController.listenForFireBaseData() -&gt; ()"
+                  moduleName = "WallPaperApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/heshan/Developer/WallPaperApp/WallPaperApp/SplashScreen/Registration/Login/Home/Frames/FramesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
