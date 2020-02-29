@@ -17,44 +17,56 @@
                 <rect key="frame" x="0.0" y="0.0" width="230" height="218"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pn5-Um-5rc">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Bl-Dn-bcW">
                         <rect key="frame" x="0.0" y="0.0" width="230" height="218"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XS9-Uf-zuO">
-                                <rect key="frame" x="0.0" y="0.0" width="230" height="218"/>
-                                <color key="backgroundColor" red="0.67086301810000004" green="0.1162803687" blue="0.22240892179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Go7-BY-h3A">
-                                <rect key="frame" x="47" y="69" width="136" height="40"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pn5-Um-5rc">
+                                <rect key="frame" x="0.5" y="0.5" width="229" height="217"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyFrame" translatesAutoresizingMaskIntoConstraints="NO" id="XS9-Uf-zuO">
+                                        <rect key="frame" x="10" y="10" width="209" height="197"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Go7-BY-h3A">
+                                        <rect key="frame" x="46.5" y="68.5" width="136" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="044-4o-NUd"/>
+                                        </constraints>
+                                        <state key="normal" title=" Unlock This Frame ">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="unlockThisFrame:" destination="gTV-IL-0wX" eventType="touchUpInside" id="MlF-DK-FrT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="044-4o-NUd"/>
+                                    <constraint firstItem="Go7-BY-h3A" firstAttribute="centerY" secondItem="Pn5-Um-5rc" secondAttribute="centerY" constant="-20" id="3dq-s5-jLC"/>
+                                    <constraint firstItem="Go7-BY-h3A" firstAttribute="centerX" secondItem="Pn5-Um-5rc" secondAttribute="centerX" id="69H-fc-nb2"/>
+                                    <constraint firstItem="XS9-Uf-zuO" firstAttribute="leading" secondItem="Pn5-Um-5rc" secondAttribute="leading" constant="10" id="No0-7Y-ZEB"/>
+                                    <constraint firstAttribute="bottom" secondItem="XS9-Uf-zuO" secondAttribute="bottom" constant="10" id="ZNM-sZ-EHV"/>
+                                    <constraint firstItem="XS9-Uf-zuO" firstAttribute="top" secondItem="Pn5-Um-5rc" secondAttribute="top" constant="10" id="lhm-D8-Xq0"/>
+                                    <constraint firstAttribute="trailing" secondItem="XS9-Uf-zuO" secondAttribute="trailing" constant="10" id="wvD-6i-0tg"/>
                                 </constraints>
-                                <state key="normal" title=" Unlock This Frame ">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="unlockThisFrame:" destination="gTV-IL-0wX" eventType="touchUpInside" id="MlF-DK-FrT"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Go7-BY-h3A" firstAttribute="centerY" secondItem="Pn5-Um-5rc" secondAttribute="centerY" constant="-20" id="3dq-s5-jLC"/>
-                            <constraint firstItem="Go7-BY-h3A" firstAttribute="centerX" secondItem="Pn5-Um-5rc" secondAttribute="centerX" id="69H-fc-nb2"/>
-                            <constraint firstItem="XS9-Uf-zuO" firstAttribute="leading" secondItem="Pn5-Um-5rc" secondAttribute="leading" id="No0-7Y-ZEB"/>
-                            <constraint firstAttribute="bottom" secondItem="XS9-Uf-zuO" secondAttribute="bottom" id="ZNM-sZ-EHV"/>
-                            <constraint firstItem="XS9-Uf-zuO" firstAttribute="top" secondItem="Pn5-Um-5rc" secondAttribute="top" id="lhm-D8-Xq0"/>
-                            <constraint firstAttribute="trailing" secondItem="XS9-Uf-zuO" secondAttribute="trailing" id="wvD-6i-0tg"/>
+                            <constraint firstAttribute="bottom" secondItem="Pn5-Um-5rc" secondAttribute="bottom" constant="0.5" id="buC-aK-L4y"/>
+                            <constraint firstAttribute="trailing" secondItem="Pn5-Um-5rc" secondAttribute="trailing" constant="0.5" id="co4-9K-1F6"/>
+                            <constraint firstItem="Pn5-Um-5rc" firstAttribute="leading" secondItem="4Bl-Dn-bcW" secondAttribute="leading" constant="0.5" id="iIR-hu-ZCg"/>
+                            <constraint firstItem="Pn5-Um-5rc" firstAttribute="top" secondItem="4Bl-Dn-bcW" secondAttribute="top" constant="0.5" id="n4m-Ks-Lrc"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Pn5-Um-5rc" secondAttribute="trailing" id="F85-oa-ysT"/>
-                <constraint firstItem="Pn5-Um-5rc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Lga-E9-qpt"/>
-                <constraint firstAttribute="bottom" secondItem="Pn5-Um-5rc" secondAttribute="bottom" id="nY6-ld-MkN"/>
-                <constraint firstItem="Pn5-Um-5rc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ziX-6P-nxs"/>
+                <constraint firstAttribute="bottom" secondItem="4Bl-Dn-bcW" secondAttribute="bottom" id="3hA-9M-1f3"/>
+                <constraint firstItem="4Bl-Dn-bcW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6QY-HN-EYk"/>
+                <constraint firstItem="4Bl-Dn-bcW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OEF-UU-eat"/>
+                <constraint firstAttribute="trailing" secondItem="4Bl-Dn-bcW" secondAttribute="trailing" id="hkv-9k-H29"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="230" height="218"/>
@@ -65,4 +77,7 @@
             <point key="canvasLocation" x="262.31884057971018" y="176.78571428571428"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="dummyFrame" width="180" height="210"/>
+    </resources>
 </document>

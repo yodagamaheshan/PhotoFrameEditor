@@ -80,7 +80,6 @@ class FramesViewController: UIViewController {
         
     }
 }
-
 extension FramesViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return frameCollection.count
@@ -107,17 +106,18 @@ extension FramesViewController: UICollectionViewDelegateFlowLayout{
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
       //2
         let sectionInsets = UIEdgeInsets(top: 50.0,
-        left: 20.0,
+        left: 10,
         bottom: 50.0,
         right: 20.0)
         
         let itemsPerRow = 2
-      let paddingSpace = sectionInsets.left * CGFloat(itemsPerRow + 1)
-      let availableWidth = view.frame.width - paddingSpace
+      let paddingSpace = sectionInsets.left * CGFloat(itemsPerRow)
+      let availableWidth = view.frame.width
       let widthPerItem = availableWidth / CGFloat(itemsPerRow)
       
       return CGSize(width: widthPerItem, height: widthPerItem)
     }
 
 }
+
 
