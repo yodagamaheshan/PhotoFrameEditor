@@ -213,10 +213,14 @@ extension EditPhotoViewController{
     
 }
 
+//MARK: TextInput
 extension EditPhotoViewController: TextInputViewControllerDelegate{
-    func suerDidSelect(text: String, font: UIFont) {
+    func suerDidSelect(text: String, font: UIFont, color: UIColor?) {
         textLabel.text = text
         textLabel.font = font
+        if color != nil{
+            textLabel.textColor = color
+        }
     }
 }
 

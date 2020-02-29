@@ -12,7 +12,7 @@ protocol TextInputViewControllerDelegate {
     /// - Parameters:
     ///   - text: user entered text
     ///   - font: font name and the size
-    func suerDidSelect(text: String, font: UIFont)
+    func suerDidSelect(text: String, font: UIFont,color: UIColor?)
 }
 
 class TextInputViewController: UIViewController {
@@ -45,6 +45,11 @@ class TextInputViewController: UIViewController {
         }
     }
     var delegate: TextInputViewControllerDelegate?
+    var selectedColor: UIColor?{
+        didSet{
+            textView.textColor = selectedColor
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +76,9 @@ class TextInputViewController: UIViewController {
     }
     
     @IBAction func colorPickerButtonPressed(_ sender: Any) {
-        
+        let colorPickerVC = ColorPickerViewController.create()
+        colorPickerVC.delegate = self
+        present(colorPickerVC, animated: true, completion: nil)
     }
     
     @IBAction func fotToggleButtonPressed(_ sender: Any) {
@@ -80,7 +87,7 @@ class TextInputViewController: UIViewController {
     
     @IBAction func doneButtonPressed(_ sender: Any) {
         if let text = textView.text, text != "Enter text..."{
-            delegate?.suerDidSelect(text: text, font: UIFont.getAppFont(font: selectedFont, with: selectedFontSize) ?? UIFont.systemFont(ofSize: CGFloat(selectedFontSize)))
+            delegate?.suerDidSelect(text: text, font: UIFont.getAppFont(font: selectedFont, with: selectedFontSize) ?? UIFont.systemFont(ofSize: CGFloat(selectedFontSize)), color: selectedColor)
         }
         dismiss(animated: true, completion: nil)
     }
@@ -145,5 +152,11 @@ extension UITextView {
         let topOffset = (bounds.size.height - size.height * zoomScale) / 2
         let positiveTopOffset = max(1, topOffset)
         contentOffset.y = -positiveTopOffset
+    }
+}
+
+extension TextInputViewController: ColorPickerViewControllerDelegate {
+    func didSelectColor(color: UIColor) {
+        self.selectedColor = color
     }
 }
