@@ -23,6 +23,7 @@ class EditPhotoViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var labelWidth: NSLayoutConstraint!
     
+    var frameImage: UIImage?
     var currentlyEditingImage: UIView = UIView() {
         willSet{
             removeBorder(from: currentlyEditingImage)
@@ -47,6 +48,7 @@ class EditPhotoViewController: UIViewController {
     }
     
     func setupViews(){
+        frameImageView.image = frameImage
         navigationController?.isNavigationBarHidden = true
         frameImageView.layer.zPosition = 1
         textLabel.layer.zPosition = 2
