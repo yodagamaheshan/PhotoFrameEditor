@@ -127,8 +127,15 @@ extension FramesViewController: FrameCollectionViewCellDelegate{
         showAllert(and: "Your request has been set to admin")
         if !frameCollection[row].isRequestSent{
             frameCollection[row].isRequestSent = true
+            frameCollectionView.reloadData()
+            sendRequestToAdmin(frameName: frameCollection[row].frameName)
             
         }
+    }
+    
+    func sendRequestToAdmin(frameName: String){
+        let databaseRef = Database.database().reference().child("Unlock Frame Requests")
+        databaseRef.setValue([frameName:["request":"Please Unlock This Frame"]])
     }
 }
 

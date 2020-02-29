@@ -29,6 +29,7 @@ class FrameCollectionViewCell: UICollectionViewCell {
     func setupViews(){
         unlockButton.layer.cornerRadius = 8
         unlockButton.backgroundColor = UIColor.getAppColor(color: .lightYellow)
+        unlockButton.titleLabel?.textAlignment = .center
     }
     
 //    struct Frame {
@@ -46,18 +47,17 @@ class FrameCollectionViewCell: UICollectionViewCell {
         if let image = frame.image{
             frameImage.image = image
         }
-        
         if frame.tappedOnce, !frame.unlock{
-            unlockButton.isHidden = false
+             unlockButton.isHidden = false
+            if frame.isRequestSent{
+                unlockButton.setTitle("  Request Sent  ", for: .normal)
+            }else{
+                unlockButton.setTitle(" Unlock This Frame ", for: .normal)
+            }
+            layoutIfNeeded()
+        }else{
+            unlockButton.isHidden = true
         }
-        if frame.isRequestSent{
-            unlockButton.titleLabel?.text = "Request Sent"
-        }
-    }
-    
-    override func prepareForReuse() {
-        unlockButton.isHidden = true
-        unlockButton.titleLabel?.text = "Unlock This Frame"
     }
     
     @IBAction func unlockThisFrame(_ sender: Any) {

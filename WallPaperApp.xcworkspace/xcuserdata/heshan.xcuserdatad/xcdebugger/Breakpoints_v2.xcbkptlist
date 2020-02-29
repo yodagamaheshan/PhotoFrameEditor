@@ -23,65 +23,81 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "81D635D1-D119-4D49-8577-7FD3223696E9"
+            uuid = "E1AD8FD4-572E-4A92-A8AE-E61953E59D04"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WallPaperApp/SplashScreen/Registration/Login/Home/Frames/FramesViewController.swift"
+            filePath = "WallPaperApp/SplashScreen/Registration/Login/Home/Frames/FrameViewCell/FrameCollectionViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "listenForFireBaseData()"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "setViewsForData(frame:in:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FE34A6B2-72C4-4FBC-B442-6B34D583CEDE"
+            uuid = "98D6D535-23F9-47EB-95F5-CA360BB31728"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WallPaperApp/SplashScreen/Registration/Login/Home/Frames/FrameViewCell/FrameCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "setViewsForData(frame:in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "03AF79D3-AD8B-4204-A11A-AB7A50322817"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WallPaperApp/SplashScreen/Registration/Login/Home/Frames/FrameViewCell/FrameCollectionViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "unlockThisFrame(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36438FCE-4894-4312-9F02-258742E9DC86"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WallPaperApp/SplashScreen/Registration/Login/Home/Frames/FramesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "listenForFireBaseData()"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "unlockButtonPressed(in:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "FE34A6B2-72C4-4FBC-B442-6B34D583CEDE - 7c7cc0e34b415ae"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.FIRDataSnapshot) -&gt; () in WallPaperApp.FramesViewController.listenForFireBaseData() -&gt; ()"
-                  moduleName = "WallPaperApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/heshan/Developer/WallPaperApp/WallPaperApp/SplashScreen/Registration/Login/Home/Frames/FramesViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "800">
-               </Location>
-               <Location
-                  uuid = "FE34A6B2-72C4-4FBC-B442-6B34D583CEDE - 78b4154d36c29578"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;WallPaperApp.Frame&gt;) -&gt; () in closure #1 (__C.FIRDataSnapshot) -&gt; () in WallPaperApp.FramesViewController.listenForFireBaseData() -&gt; ()"
-                  moduleName = "WallPaperApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/heshan/Developer/WallPaperApp/WallPaperApp/SplashScreen/Registration/Login/Home/Frames/FramesViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "104">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "035BE136-CE5A-4B1D-B9D0-2429EF641A17"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WallPaperApp/SplashScreen/Registration/Login/Home/Frames/FramesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "unlockButtonPressed(in:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

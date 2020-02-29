@@ -27,13 +27,13 @@
                                         <rect key="frame" x="10" y="10" width="209" height="197"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </imageView>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Go7-BY-h3A">
-                                        <rect key="frame" x="50.5" y="68.5" width="128" height="40"/>
+                                    <button hidden="YES" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Go7-BY-h3A">
+                                        <rect key="frame" x="99.5" y="68.5" width="30" height="40"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="044-4o-NUd"/>
                                         </constraints>
-                                        <state key="normal" title="Unlock This Frame">
+                                        <state key="normal">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
