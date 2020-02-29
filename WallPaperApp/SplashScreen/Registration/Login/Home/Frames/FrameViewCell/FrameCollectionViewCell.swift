@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol FrameCollectionViewCellDelegate{
+    func unlockButtonPressed(in row: Int)
+}
+
 class FrameCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var frameImage: UIImageView!
     @IBOutlet weak var unlockButton: UIButton!
     
     var photoFrame: Frame?
+    var rowNumber: Int!
+    var delegate: FrameCollectionViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,20 +31,37 @@ class FrameCollectionViewCell: UICollectionViewCell {
         unlockButton.backgroundColor = UIColor.getAppColor(color: .lightYellow)
     }
     
-    func setPhotoFrame(frame:Frame){
-        photoFrame = frame
-        URLSession.shared.dataTask(with: URL(string: frame.imageURL)!) { (data, response, error) in
-            if data != nil{
-                DispatchQueue.main.async {
-                    self.frameImage.image = UIImage(data: data!)
-                }
-            }
-        }.resume()
-     
+//    struct Frame {
+//        let frameName: String
+//        let imageURL: String
+//        let unlock: Bool
+//        var isRequestSent: Bool
+//        var tappedOnce: Bool
+//        var image: UIImage?
+//    }
+    
+    func setViewsForData(frame: Frame, in row: Int){
+        rowNumber = row
+        
+        if let image = frame.image{
+            frameImage.image = image
+        }
+        
+        if frame.tappedOnce, !frame.unlock{
+            unlockButton.isHidden = false
+        }
+        if frame.isRequestSent{
+            unlockButton.titleLabel?.text = "Request Sent"
+        }
+    }
+    
+    override func prepareForReuse() {
+        unlockButton.isHidden = true
+        unlockButton.titleLabel?.text = "Unlock This Frame"
     }
     
     @IBAction func unlockThisFrame(_ sender: Any) {
-        
+        delegate?.unlockButtonPressed(in: rowNumber)
     }
     
 }
