@@ -14,6 +14,9 @@ struct Frame {
     let frameName: String
     let imageURL: String
     let unlock: Bool
+    var isRequestSent: Bool
+    var tappedOnce: Bool
+    var image: UIImage?
 }
 
 class FramesViewController: UIViewController {
