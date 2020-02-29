@@ -69,4 +69,88 @@ extension FramesViewController: UICollectionViewDelegate{
 
 extension FramesViewController: UICollectionViewDelegateFlowLayout{
     //TODO: make frame collection like in photo app
+      func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+      //2
+        let sectionInsets = UIEdgeInsets(top: 50.0,
+        left: 20.0,
+        bottom: 50.0,
+        right: 20.0)
+        
+        let itemsPerRow = 2
+      let paddingSpace = sectionInsets.left * CGFloat(itemsPerRow + 1)
+      let availableWidth = view.frame.width - paddingSpace
+      let widthPerItem = availableWidth / CGFloat(itemsPerRow)
+      
+      return CGSize(width: widthPerItem, height: widthPerItem)
+    }
+
+}
+
+extension FramesViewController{
+    
+    func downloadAllImages(_ urls: [URL], completion: @escaping ([UIImage]) -> Void) {
+        DispatchQueue.global(qos: .utility).async {
+            let group = DispatchGroup()
+            let semaphore = DispatchSemaphore(value: 4)
+            var imageDictionary: [URL: UIImage] = [:]
+
+            // download the images
+
+            for url in urls {
+                group.enter()
+                semaphore.wait()
+
+                self.download(url) { result in
+                    defer {
+                        semaphore.signal()
+                        group.leave()
+                    }
+
+                    switch result {
+                    case .failure(let error):
+                        print(error)
+
+                    case .success(let image):
+                        DispatchQueue.main.async {
+                            imageDictionary[url] = image
+                        }
+                    }
+                }
+            }
+
+            // now sort the results
+
+            group.notify(queue: .main) {
+                completion(urls.compactMap { imageDictionary[$0] })
+            }
+        }
+    }
+    
+    enum DownloadError: Error {
+        case notImage
+        case invalidStatusCode(URLResponse)
+    }
+
+    func download(_ url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data, let response = response as? HTTPURLResponse, error == nil else {
+                completion(.failure(error!))
+                return
+            }
+
+            guard 200..<300 ~= response.statusCode else {
+                completion(.failure(DownloadError.invalidStatusCode(response)))
+                return
+            }
+
+            guard let image = UIImage(data: data) else {
+                completion(.failure(DownloadError.notImage))
+                return
+            }
+
+            completion(.success(image))
+        }
+    }
 }

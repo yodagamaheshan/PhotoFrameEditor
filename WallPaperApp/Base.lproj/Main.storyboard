@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KLI-aR-FMx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="I1o-mX-f5x">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -273,13 +273,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gyx-yN-72P">
-                                <rect key="frame" x="0.0" y="44" width="375" height="563"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyFrame" translatesAutoresizingMaskIntoConstraints="NO" id="DB4-zO-S2t">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7d-Eo-mFe">
-                                        <rect key="frame" x="187.5" y="281.5" width="0.0" height="0.0"/>
+                                        <rect key="frame" x="187.5" y="303.5" width="0.0" height="0.0"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="rl3-WJ-kU2"/>
@@ -1238,24 +1238,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PhQ-qw-rhR" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3340" y="89.505247376311857"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="PwQ-Rb-Ui2">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KLI-aR-FMx" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4J4-hE-Cwz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Ncm-zI-gmA" kind="relationship" relationship="rootViewController" id="8aE-iN-6LT"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eeI-QD-lFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4792.8000000000002" y="93.103448275862078"/>
         </scene>
     </scenes>
     <resources>
