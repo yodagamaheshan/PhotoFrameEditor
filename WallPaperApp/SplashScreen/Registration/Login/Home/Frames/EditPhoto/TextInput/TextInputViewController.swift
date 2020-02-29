@@ -82,6 +82,7 @@ class TextInputViewController: UIViewController {
         if let text = textView.text, text != "Enter text..."{
             delegate?.suerDidSelect(text: text, font: UIFont.getAppFont(font: selectedFont, with: selectedFontSize) ?? UIFont.systemFont(ofSize: CGFloat(selectedFontSize)))
         }
+        dismiss(animated: true, completion: nil)
     }
  
     @IBAction func editingEnd(_ sender: UITextField) {

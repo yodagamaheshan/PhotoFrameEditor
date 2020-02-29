@@ -15,8 +15,8 @@ class EditPhotoViewController: UIViewController {
     @IBOutlet weak var frameImageView: UIImageView!
     @IBOutlet weak var textEditingLayer: UIView!
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var labelWidth: NSLayoutConstraint!
     
-    var editedImage: UIImage?
     var currentlyEditingImage: UIView = UIView() {
         willSet{
             removeBorder(from: currentlyEditingImage)
@@ -44,6 +44,7 @@ class EditPhotoViewController: UIViewController {
         navigationController?.isNavigationBarHidden = true
         frameImageView.layer.zPosition = 1
         textLabel.layer.zPosition = 2
+        labelWidth.constant = UIScreen.main.bounds.width
     }
     
     @IBAction func chooseImageButtonPressed(_ sender: Any) {
@@ -59,9 +60,9 @@ class EditPhotoViewController: UIViewController {
     }
     
     @IBAction func addTextButtonPressed(_ sender: Any) {
-        
-        
-        
+        let textInputVC = TextInputViewController.create()
+        textInputVC.delegate = self
+        present(textInputVC, animated: true, completion: nil)
 
     }
     
@@ -199,5 +200,12 @@ extension EditPhotoViewController{
         
     }
     
+}
+
+extension EditPhotoViewController: TextInputViewControllerDelegate{
+    func suerDidSelect(text: String, font: UIFont) {
+        textLabel.text = text
+        textLabel.font = font
+    }
 }
 
