@@ -106,8 +106,15 @@ extension FramesViewController: UICollectionViewDataSource{
 
 extension FramesViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if frameCollection[indexPath.row].unlock{
+            let editingVC = EditPhotoViewController.create()
+            editingVC.frameImage = frameCollection[indexPath.row].image
+            goTo(viewController: editingVC)
+        }
+        else{
         frameCollection[indexPath.row].tappedOnce = true
         frameCollectionView.reloadData()
+        }
     }
 }
 
