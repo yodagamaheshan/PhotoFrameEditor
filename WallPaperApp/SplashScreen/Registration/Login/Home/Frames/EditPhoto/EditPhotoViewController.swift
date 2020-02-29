@@ -10,6 +10,12 @@ import UIKit
 
 class EditPhotoViewController: UIViewController {
     
+    static func create() -> EditPhotoViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: self))
+        let viewController = storyboard.instantiateViewController(withIdentifier: String(describing: EditPhotoViewController.self)) as? EditPhotoViewController
+        return viewController!
+    }
+
     
     @IBOutlet weak var editingAreaView: UIView!
     @IBOutlet weak var frameImageView: UIImageView!
