@@ -20,9 +20,18 @@ struct Frame {
 }
 
 class FramesViewController: UIViewController {
+    
+    static func create() -> FramesViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle(for: self))
+        let viewController = storyboard.instantiateViewController(withIdentifier: String(describing: FramesViewController.self)) as? FramesViewController
+        return viewController!
+    }
+
+    
     @IBOutlet weak var frameCollectionView: UICollectionView!
     var frameCollection:[Frame] = []
     var ref: DatabaseReference!
+    var childName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +45,7 @@ class FramesViewController: UIViewController {
     }
     
     func listenForFireBaseData(){
-        ref = Database.database().reference().child("Birthday_Frames")
+        ref = Database.database().reference().child(childName!)
         ref.observe(.value) { (dataSnapshot) in
             
             let allFrames = dataSnapshot.value as! [String : Any]
@@ -57,6 +66,7 @@ class FramesViewController: UIViewController {
         }
     }
     
+
     
     func getData(frames: [Frame],completion: @escaping ([Frame])-> Void ){
         var framesToDownload = frames

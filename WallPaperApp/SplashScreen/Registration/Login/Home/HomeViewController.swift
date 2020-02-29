@@ -8,6 +8,14 @@
 
 import UIKit
 
+enum FrameInDatabase: String{
+    case Birthday_Frames = "Birthday Frames"
+    case Endearment_Frames = "Endearment Frames"
+    case Matrimonial_Frames = "Matrimonial Frames"
+    case Memorial_Frame = "Memorial Frames"
+
+}
+
 class HomeViewController: UIViewController {
     @IBOutlet var buttonCollection: [UIButton]!
     
@@ -42,9 +50,24 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func framesButtonPressed(_ sender: UIButton) {
-        
         if let buttonName = sender.title(for: .normal){
-            print(buttonName)
+            
+            let framesVC = FramesViewController.create()
+            
+            switch buttonName {
+            case "Birthday Frames":
+                framesVC.childName = "Birthday_Frames"
+            case "Endearment Frames":
+                framesVC.childName = "Endearment_Frames"
+            case "Matrimonial Frames":
+                framesVC.childName = "Matrimonial_Frames"
+            case "Memorial Frames" :
+                framesVC.childName = "Memorial_Frame"
+            default:
+                framesVC.childName = "Birthday_Frames"
+            }
+            
+            goTo(viewController: framesVC)
         }
         
     }
