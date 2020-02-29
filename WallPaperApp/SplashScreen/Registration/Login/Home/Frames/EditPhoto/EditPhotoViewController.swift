@@ -57,6 +57,9 @@ class EditPhotoViewController: UIViewController {
     }
     
     @IBAction func backgroundColorButtonPressed(_ sender: Any) {
+        let textInputVC = ColorPickerViewController.create()
+        textInputVC.delegate = self
+        present(textInputVC, animated: true, completion: nil)
     }
     
     @IBAction func addTextButtonPressed(_ sender: Any) {
@@ -209,3 +212,9 @@ extension EditPhotoViewController: TextInputViewControllerDelegate{
     }
 }
 
+//MARK: Color picker
+extension EditPhotoViewController: ColorPickerViewControllerDelegate{
+    func didSelectColor(color: UIColor) {
+        editingAreaView.backgroundColor = color
+    }
+}

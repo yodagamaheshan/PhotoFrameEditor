@@ -25,7 +25,7 @@ class ColorPickerViewController: UIViewController, WDColorPickerViewDelegate {
     @IBOutlet weak var colorPicker: WDColorPickerView!
     var delegate: ColorPickerViewControllerDelegate?
     var initialColor: UIColor?
-    
+    var selectedColor: UIColor?
     override func viewDidLoad() {
         super.viewDidLoad()
         self.colorPicker.delegate = self
@@ -36,6 +36,15 @@ class ColorPickerViewController: UIViewController, WDColorPickerViewDelegate {
         pickerContainer.layer.cornerRadius = 8
     }
     func colorChanged(colorPicker: WDColorPickerView, color: UIColor) {
-        delegate?.didSelectColor(color: color)
+        selectedColor = color
     }
+    @IBAction func cancelButtonDidPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func okButtonPressed(_ sender: Any) {
+        delegate?.didSelectColor(color: selectedColor!)
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
