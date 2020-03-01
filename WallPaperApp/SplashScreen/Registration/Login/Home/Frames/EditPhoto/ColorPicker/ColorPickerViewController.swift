@@ -43,8 +43,10 @@ class ColorPickerViewController: UIViewController, WDColorPickerViewDelegate {
     }
     
     @IBAction func okButtonPressed(_ sender: Any) {
+        if selectedColor != nil{
         delegate?.didSelectColor(color: selectedColor!)
         dismiss(animated: true, completion: nil)
+        }
     }
     
 }
