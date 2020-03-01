@@ -49,7 +49,6 @@ class EditPhotoViewController: UIViewController {
     
     func setupViews(){
         frameImageView.image = frameImage
-        navigationController?.isNavigationBarHidden = true
         frameImageView.layer.zPosition = 1
         textLabel.layer.zPosition = 2
         labelWidth.constant = UIScreen.main.bounds.width
