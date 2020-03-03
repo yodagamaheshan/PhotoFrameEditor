@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import ProgressHUD
 
 
 struct Frame {
@@ -44,7 +45,13 @@ class FramesViewController: UIViewController {
         listenForFireBaseData()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        ProgressHUD.dismiss()
+    }
+    
     func listenForFireBaseData(){
+        ProgressHUD.show()
+        ProgressHUD.colorSpinner(UIColor.getAppColor(color: .lightYellow))
         ref = Database.database().reference().child(childName!)
         ref.observe(.value) { (dataSnapshot) in
             
@@ -61,7 +68,7 @@ class FramesViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.frameCollectionView.reloadData()
                 }
-                
+                ProgressHUD.dismiss()
             }
         }
     }

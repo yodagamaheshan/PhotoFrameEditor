@@ -10,4 +10,5 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Core'
 pod 'WDColorPicker', ' ~> 1.0.1'
+pod 'ProgressHUD'
 end
