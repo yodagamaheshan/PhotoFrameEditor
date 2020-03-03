@@ -75,6 +75,10 @@ class TextInputViewController: UIViewController {
         textView.centerVertically()
     }
     
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func colorPickerButtonPressed(_ sender: Any) {
         let colorPickerVC = ColorPickerViewController.create()
         colorPickerVC.delegate = self
