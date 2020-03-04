@@ -561,15 +561,17 @@
 			baseConfigurationReference = A020D8C38E4A8B69BB88CB5D /* Pods-WallPaperApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MJG4P4S4Q9;
+				DEVELOPMENT_TEAM = Q5KJ24W38Y;
 				INFOPLIST_FILE = WallPaperApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Umbra.arsalanalishah1--arsalanalishah1";
+				PRODUCT_BUNDLE_IDENTIFIER = "HeshCompany.arsalanalishah1--arsalanalishah1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -580,15 +582,17 @@
 			baseConfigurationReference = ED497697AF42808AD8B2F643 /* Pods-WallPaperApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MJG4P4S4Q9;
+				DEVELOPMENT_TEAM = Q5KJ24W38Y;
 				INFOPLIST_FILE = WallPaperApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Umbra.arsalanalishah1--arsalanalishah1";
+				PRODUCT_BUNDLE_IDENTIFIER = "HeshCompany.arsalanalishah1--arsalanalishah1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
